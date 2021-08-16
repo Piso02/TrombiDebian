@@ -15,8 +15,6 @@
 
         <body>
             <div class="main">
-                <form method="POST" action="{{ url_for('index') }}">
-                {{ form.csrf_token }}
                 <table class="authentication">
                     <tr>
                         <td> <img class="logo" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}"> </td>
@@ -27,18 +25,13 @@
                     <tr>
                         <td>
                          <img class="icon" src="{{url_for('static', filename='img/user.png')}}"> 
-                         <div class="input">
-                            {{ render_field(form.user_name_pid, class_="form-control", value="") }} 
-                         </div>
+                          <input placeholder="Nom d'utilisateur">                            
                         </td>
                     </tr>
                     <tr>
                         <td> 
                          <img class="icon" src="{{url_for('static', filename='img/password.png')}}"> 
-                         <div class="input">
-                            {{ render_field(form.user_pid_Password, class_="form-control", value="") }}
-                         </div>
-                        </td>
+                             <input type="password" id="pwd" placeholder="Mot de passe">                                           </td>
                     </tr>
                     <tr>
                         <td>
@@ -48,7 +41,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> <button class="login" href="#login" onclick="loading();"> Se connecter </button> </td>
+                        <td> <button class="login" href="#login" > Se connecter </button> </td>
                     </tr>
                 </table>
                 </form>
