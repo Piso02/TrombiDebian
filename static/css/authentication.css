@@ -1,0 +1,78 @@
+
+.main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 300px;
+    height: 450px;
+    
+}
+
+/* tableau contenant l'authentification */
+.authentication {
+    margin-left: 17%;
+    margin-top: 10%;
+}
+
+/* Logo sur l'authentification */
+.logo {
+    width: 180px;
+    height: 160px;
+    position: relative;
+    left: 10%;
+}
+
+/* Titre Trombinoscope */
+.Title {
+    font-family: Rockwell Condensed;
+    font-size: 32px;
+    text-shadow: 1px 1px 2px grey;
+    position: relative;
+    left: 10%;
+}
+
+/* Icône authentification */
+.icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+}
+
+/* input login */
+input {
+    padding: 6px;
+    margin-top: 8px;
+}
+
+/* Afficher le mot de passe */
+.affpwd {
+    font-size: small;
+    margin-top: 5px;
+
+}
+
+/* Bouton Se connecter */
+.login {
+    background-color: #003d6b;
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    height: 25px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: rgb(238, 231, 231);
+    color: #003d6b;
+}
+
