@@ -1,12 +1,165 @@
 <html>
+    <head>
+        
+         <!-- Link to authentification.css -->
+         <link href="{{ url_for('static', filename= 'css/index.css')}}" rel="stylesheet" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>FlaskBlog</title>
-</head>
+         <!-- Bootstrap 
+         <link href="css/bootstrap.css" rel="stylesheet">
+         <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    </head>
 
     <body>
-        <h1>ty zany le index</h1>
+        <!-- Section exploration (page entière) -->
+            <div class="container">  
+                
+                <!-- Menu affichant les départements -->
+                    <div class="col1">
+                        <ul>
+                            <li> 
+                                <a class="navlink" href="">
+                                    ADMINISTRATION 
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="navlink" href="">
+                                     AMOA 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navlink" href="">
+                                     ASSOCIE 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    AUDIT 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="Scroll.html">
+                                    BPO COMPTA 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    BPO RH 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    COMMERCIAL 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    COMMUNICATION
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    DAF 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    FINANCE
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="depart.html">
+                                    INFO
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navlink" href="">
+                                     ORGA
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    QUALITE 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    RHC
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    RHI 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                <!-- Section d'exploration -->
+                    <div class="col2">
+                            <!-- top nav -->
+                            <a href="{{ url_for('static', filename= 'index.html')}}">
+                                <img class="logo" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}">
+                            </a>
+                                
+                            <div class="search-container">
+                                <form action="/action_page.php">
+                                    <input type="text" placeholder="Rechercher.." name="search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                                <a href="/logout">
+                                    <img class="logout" src="{{url_for('static', filename='img/logout.png')}}">
+                                </a>
+                            </div>
+
+                            <!-- section personnel -->
+                            <div class="caroussel">
+                                <table>
+                                    <!-- ligne associé-->
+                                        <tr>
+                                            <td> 
+                                                <img class="photo" src="{{url_for('static', filename='img/A1.png')}}">                                                              
+                                                <p class="NomPersonnel">Thierry RAJAONA </p>                                                                      
+                                                <p class="Fonction">Associé-Gérant</p>  </p>                                                                                                              
+                                                <a href = "mailto:trajaona@fthmconsulting.com">
+                                                   <i class="fa fa-envelope" title="trajaona@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 07 007 11 / 034 07 007 11 / 22 517 01 / +06 26 50 27 10
+                                                Fixe:503"></i>  
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{url_for('static', filename='img/A2.png')}}">                                
+                                                <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
+                                                <p class="Fonction"> Managing Director </p>                                                                                                             
+                                                <a href = "mailto:xmichel@fthmconsulting.com">
+                                                   <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{url_for('static', filename='img/A3.jpg')}}">                                
+                                                <p class="NomPersonnel"> Hugo RAMIANDRISOA </p>                                                                      
+                                                <p class="Fonction"> Associé </p> 
+                                                <a href = "mailto:hramiandrisoa@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="hramiandrisoa@fthmconsulting.com"></i>
+                                                    <i class="fa fa-phone" title="Mobile :032 07 110 84 / 034 07 110 84" ></i>
+                                                 </a>       
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{url_for('static', filename='img/A4.jpg')}}">                                
+                                                <p class="NomPersonnel"> Fidelis RANDRIANIRINA </p>                                                                      
+                                                <p class="Fonction"> Secrétaire Général </p>                                                                                                                       
+                                                <a href = "mailto:frandrianirina@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="frandrianirina@fthmconsulting.com"></i>
+                                                    <i class="fa fa-phone" title="Mobile :032 11 390 68 / 034 05 390 68" ></i>
+                                                 </a> 
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                    </div>           
+            </div>
     </body>
+
 </html>

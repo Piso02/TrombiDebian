@@ -15,6 +15,7 @@
 
         <body>
             <div class="main">
+                <form action="/" method="post">
                 <table class="authentication">
                     <tr>
                         <td> <img class="logo" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}"> </td>
@@ -25,13 +26,13 @@
                     <tr>
                         <td>
                          <img class="icon" src="{{url_for('static', filename='img/user.png')}}"> 
-                          <input placeholder="Nom d'utilisateur">                            
+                          <input name="username" id="username" placeholder="Nom d'utilisateur">                           
                         </td>
                     </tr>
                     <tr>
                         <td> 
                          <img class="icon" src="{{url_for('static', filename='img/password.png')}}"> 
-                             <input type="password" id="pwd" placeholder="Mot de passe">                                           </td>
+                             <input type="password" name="password" id="password" placeholder="Mot de passe">                                           </td>
                     </tr>
                     <tr>
                         <td>
@@ -41,23 +42,23 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> <button class="login" href="#login" > Se connecter </button> </td>
+                        <td> <button class="login" type="submit" value"Log In"> Se connecter </button> </td>
                     </tr>
                 </table>
                 </form>
-                
-                </div>
-            
-            <!-- input example 
-            <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-            </div> -->
+                    {% for message in get_flashed_messages() %}
+                        <div style="padding-left:25%" class=flash>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+
+             </div>
+           
 
         <!-- Script pwd -->    
         <script>
             function pwdFunction() {
-              var x = document.getElementById("pwd");
+              var x = document.getElementById("password");
               if (x.type === "password") {
                 x.type = "text";
               } else {
@@ -65,6 +66,19 @@
               }
             }
         </script>
+
+        {%if users%}
+    <div class="users" >
+      <h2>Registered Users List</h2>
+      <table style="width:100%;">
+        {%for user in users%}
+          <tr>
+            <td>{{user[0]}}</td>
+          </tr>
+        {%endfor%}
+      </table>
+    </div>
+    {%endif%}
 
         </body>
         

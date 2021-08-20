@@ -1,0 +1,135 @@
+/* body properties */
+body {
+    margin: 0;
+}
+
+/* Section de la page entière */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+/* Make the 2 columns inline */
+.col1, .col2 {
+    position: relative;
+    display: inline;
+    margin: 0;
+}
+
+/* Menu depart -- 1ère colonne */
+.col1 {
+    width: 25%;
+    height: auto;
+    background-color: #003d6b;
+}
+
+/* menu style */
+ul {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 70%;
+}
+
+li {
+    margin: 10px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-family: 'Calibri';
+}
+
+li a:hover {
+    background-color: rgb(238, 231, 231);
+    color: black;
+  }
+
+
+/* Section d'exploration -- 2ème colonne */
+.col2 {
+    border: 1px solid #a6b0b1;
+    width: 75%;
+    height: auto;
+}
+
+/* logo FTHM dans la section */
+.logo {
+    width: 100px;
+    height: 110px;
+}
+
+/* search bar */
+.search-container {
+    float: right;
+    display: flex;
+}
+
+input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 13px;
+    border: 1px thin #003d6b;
+  }
+  
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+.logout {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px ;
+}
+
+/* Section personne -- ligne associé */
+.photo {
+    border-radius: 50%;
+    margin-bottom: 7px;
+}
+
+table {
+    display: block;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+td {
+    padding: 20px;
+    text-align: center;
+}
+
+.NomPersonnel {
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.Fonction {
+    font-family: 'Calibri';
+}
+
+p {
+    margin :0;
+}
+
+.caroussel a{
+    text-decoration: none;
+    color: black;
+}

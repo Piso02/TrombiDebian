@@ -8,9 +8,7 @@ with open('trombi_model.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO utilisateur (Utilisateur_Nom, MotDePasse) VALUES (?, ?)",
-            ('UserTest', 'UserTest1234')
-            )
+
 
 connection.commit()
 connection.close()
