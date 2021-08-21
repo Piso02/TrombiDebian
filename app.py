@@ -1,14 +1,18 @@
 from flask import *
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import create_engine
+from flask_appbuilder import SQLA, AppBuilder
 from models import *
 from functools import wraps
 import models as dbHandler
 
-engine = create_engine('mysql+pymsql://rojo:1234@localhost/trombi_model')
+#engine = create_engine('mysql+pymysql://rojo:1234@localhost/trombi_model')
 
 app = Flask(__name__)
-app.secret_key = "trombi"
+app.config['SECRET_KEY'] = "trombi"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://rojo:1234@localhost/trombi_model'
+
+db = SQLAlchemy(app)
+
 
 
 def login_required(f):
@@ -35,10 +39,9 @@ def login():
     if request.method=='POST':
         username = request.form.get('username')
         password = request.form.get('password')
-
-        usernamedata=db.execute("SELECT username FROM users WHERE username=:username", {"username":username}).fetchone()
-        passworddata=db.execute("SELECT password FROM users WHERE username=:username", {"username":username}).fetchone()
-    
+        entry = users(username=username, password=password)
+        db.session.add(entry)
+        db.session.commit()    
     return render_template('login.html')
 
 
