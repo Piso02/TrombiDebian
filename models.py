@@ -29,11 +29,11 @@ class Departement(Base):
     Departement_Partage = Column(String(40))
 
 
-t_users = Table(
-    'users', metadata,
-    Column('username', String(30)),
-    Column('password', String(20))
-)
+class User(Base):
+    __tablename__ = 'users'
+
+    username = Column(String(30), primary_key=True)
+    password = Column(String(30))
 
 
 class Personnel(Base):

@@ -116,18 +116,21 @@
                             <!-- section personnel -->
                             <div class="caroussel">
                                 <table>
-                                    <!-- ligne associé-->
+                                    <!-- ligne associé--> 
                                         <tr>
+                                        {% for personnel in personnel %}
                                             <td> 
                                                 <img class="photo" src="{{url_for('static', filename='img/A1.png')}}">                                                              
-                                                <p class="NomPersonnel">Thierry RAJAONA </p>                                                                      
-                                                <p class="Fonction">Associé-Gérant</p>  </p>                                                                                                              
+                                                <p class="NomPersonnel"> {{personnel.Personnel_Nom}} </p>                                                                      
+                                                <p class="Fonction"> {{personnel.Fonction}}</p>  </p>                                                                                                              
                                                 <a href = "mailto:trajaona@fthmconsulting.com">
                                                    <i class="fa fa-envelope" title="trajaona@fthmconsulting.com"></i>
                                                 </a>
                                                 <i class="fa fa-phone" title="Mobile : 032 07 007 11 / 034 07 007 11 / 22 517 01 / +06 26 50 27 10
                                                 Fixe:503"></i>  
                                             </td>
+                                        {% endfor %}
+                                            <!--
                                             <td> 
                                                 <img class="photo" src="{{url_for('static', filename='img/A2.png')}}">                                
                                                 <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
@@ -154,7 +157,8 @@
                                                     <i class="fa fa-envelope" title="frandrianirina@fthmconsulting.com"></i>
                                                     <i class="fa fa-phone" title="Mobile :032 11 390 68 / 034 05 390 68" ></i>
                                                  </a> 
-                                            </td>
+                                            </td> -->
+                                            
                                         </tr>
                                 </table>
                             </div>

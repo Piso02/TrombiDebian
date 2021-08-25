@@ -26,13 +26,13 @@
                     <tr>
                         <td>
                          <img class="icon" src="{{url_for('static', filename='img/user.png')}}"> 
-                          <input name="username" id="username" placeholder="Nom d'utilisateur">                           
+                          <input name="username" id="username" required placeholder="Nom d'utilisateur">                           
                         </td>
                     </tr>
                     <tr>
                         <td> 
                          <img class="icon" src="{{url_for('static', filename='img/password.png')}}"> 
-                             <input type="password" name="password" id="password" placeholder="Mot de passe">                                           </td>
+                             <input type="password" name="password" id="password" required placeholder="Mot de passe">                                           </td>
                     </tr>
                     <tr>
                         <td>
@@ -67,19 +67,6 @@
             }
         </script>
 
-        {%if users%}
-    <div class="users" >
-      <h2>Registered Users List</h2>
-      <table style="width:100%;">
-        {%for user in users%}
-          <tr>
-            <td>{{user[0]}}</td>
-          </tr>
-        {%endfor%}
-      </table>
-    </div>
-    {%endif%}
-
-        </body>
+       </body>
         
     </html>
