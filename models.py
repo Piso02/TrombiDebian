@@ -1,32 +1,54 @@
 # coding: utf-8
-from sqlalchemy import Column, Date, ForeignKey, String, Table
+from sqlalchemy import Column, Date, ForeignKey, String
 from sqlalchemy.orm import relationship
-from sqlalchemy.dialects.mysql import INTEGER
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 metadata = Base.metadata
 
 
-class Cursu(Base):
-    __tablename__ = 'cursus'
+class AutreAdresse(Base):
+    __tablename__ = 'autre_adresse'
 
-    Cursus_id = Column(String(10), primary_key=True)
-    Poste = Column(String(100))
-    Cursus_DateDebut = Column(Date)
-    Cursus_DateFin = Column(Date)
-    Entreprise = Column(String(100))
+    adresse_id = Column(String(5), primary_key=True)
+    adresse_nom = Column(String(100))
 
-    personnel = relationship('Personnel', secondary='cursus_personnel')
+
+class AutreMateriel(Base):
+    __tablename__ = 'autre_materiel'
+
+    materiel_id = Column(String(5), primary_key=True)
+    materiel_denomination = Column(String(100))
+
+
+class AutrePartage(Base):
+    __tablename__ = 'autre_partage'
+
+    partage_id = Column(String(3), primary_key=True)
+    partage_nom = Column(String(100))
 
 
 class Departement(Base):
     __tablename__ = 'departement'
 
-    Departement_id = Column(String(4), primary_key=True)
-    Departement_Nom = Column(String(25))
-    Departement_AdresseGroupE = Column(String(40))
-    Departement_Partage = Column(String(40))
+    departement_id = Column(String(4), primary_key=True)
+    departement_nom = Column(String(25))
+    departement_adresseGroup = Column(String(40))
+    departement_partage = Column(String(40))
+
+
+class ExtensionMail(Base):
+    __tablename__ = 'extension_mail'
+
+    extension_id = Column(String(5), primary_key=True)
+    extension_nom = Column(String(20))
+
+
+class RoutageMail(Base):
+    __tablename__ = 'routage_mail'
+
+    routage_id = Column(String(5), primary_key=True)
+    routage_mail = Column(String(50))
 
 
 class User(Base):
@@ -39,108 +61,109 @@ class User(Base):
 class Personnel(Base):
     __tablename__ = 'personnel'
 
-    Matricule = Column(String(10), primary_key=True)
-    Personnel_Nom = Column(String(30))
-    Personnel_Prenom = Column(String(30))
-    Fonction = Column(String(100))
-    Personnel_Statut = Column(String(20))
-    Personnel_Mail = Column(String(50))
-    Personnel_phone = Column(String(20))
-    Departement_id = Column(ForeignKey('departement.Departement_id'), nullable=False, index=True)
+    matricule = Column(String(10), primary_key=True)
+    personnel_nom = Column(String(30))
+    personnel_prenom = Column(String(30))
+    fonction = Column(String(100))
+    personnel_statut = Column(String(20))
+    personnel_mail = Column(String(50))
+    personnel_phone = Column(String(20))
+    departement_id = Column(ForeignKey('departement.departement_id'), nullable=False, index=True)
 
-    Departement = relationship('Departement')
+    departement = relationship('Departement')
 
 
 class ChecklistInfo(Base):
     __tablename__ = 'checklist_info'
 
-    List_id = Column(String(5), primary_key=True)
-    Machine_Ref = Column(String(20))
-    VPNServer_Statut = Column(String(3))
-    VPNBPOC_Statut = Column(String(3))
-    VPNBPORH_Statut = Column(INTEGER(3))
+    list_id = Column(String(5), primary_key=True)
+    machine_ref = Column(String(20))
+    VPNServer_statut = Column(String(3))
+    VPNBPOC_statut = Column(String(3))
+    VPNBPORH_statut = Column(String(3))
     OCS_Statut = Column(String(3))
-    Partage00AMI_Statut = Column(String(3))
-    Partage01Propales_Statut = Column(String(3))
-    Partage02ProjetMission_Statut = Column(String(3))
-    Partage04OutilsInternes_Statut = Column(String(3))
-    Partage05Biblio_Statut = Column(String(3))
-    Partage06Qualite_Statut = Column(String(3))
-    Badge_Statut = Column(String(3))
-    Badge_Num = Column(String(8))
-    Habilitation_Statut = Column(String(10))
-    Matricule = Column(ForeignKey('personnel.Matricule'), nullable=False, index=True)
+    dernierSauv_mail = Column(Date)
+    partage00AMI_statut = Column(String(3))
+    partage01Propales_statut = Column(String(3))
+    partage02ProjetMission_statut = Column(String(3))
+    partage04OutilsInternes_statut = Column(String(3))
+    partage05Biblio_statut = Column(String(3))
+    badge_statut = Column(String(3))
+    badge_num = Column(String(8))
+    habilitation_statut = Column(String(10))
+    matricule = Column(ForeignKey('personnel.matricule'), nullable=False, index=True)
 
     personnel = relationship('Personnel')
 
 
-t_cursus_personnel = Table(
-    'cursus_personnel', metadata,
-    Column('Cursus_id', ForeignKey('cursus.Cursus_id'), primary_key=True, nullable=False),
-    Column('Matricule', ForeignKey('personnel.Matricule'), primary_key=True, nullable=False, index=True)
-)
+class Cursu(Base):
+    __tablename__ = 'cursus'
+
+    cursus_id = Column(String(10), primary_key=True)
+    poste = Column(String(100))
+    cursus_datedebut = Column(Date)
+    cursus_datefin = Column(Date)
+    entreprise = Column(String(100))
+    matricule = Column(ForeignKey('personnel.matricule'), nullable=False, index=True)
+
+    personnel = relationship('Personnel')
 
 
 class Habilitation(Base):
     __tablename__ = 'habilitation'
 
-    Habilitation_num = Column(String(5), primary_key=True)
-    Habilitation_Statut = Column(String(12))
-    Habilitation_nom = Column(String(100))
-    Habilitation_DateDemande = Column(Date)
-    Demandeur_Nom = Column(String(60))
-    Date_Arrivee = Column(Date)
-    Date_Depart = Column(Date)
-    Badge_StatutCS = Column(String(12))
-    BesoinMateriel_Statut = Column(String(3))
-    PCFixe_Statut = Column(String(3))
-    Portable_Statut = Column(String(3))
-    AutreMatériel = Column(String(100))
-    AncienUtilisateur = Column(String(100))
-    Note = Column(String(100))
-    Mail_Statut = Column(String(12))
-    Mail_Extension = Column(String(20))
-    Personnel_AdresseGroupE = Column(String(30))
-    AutreAdresse = Column(String(40))
-    Mail_Routage = Column(String(50))
-    Routage_DateDebut = Column(Date)
-    Routage_DateFin = Column(Date)
-    ReponseAuto_Statut = Column(String(3))
-    ReponseAuto_Contenu = Column(String(250))
-    ReponseAutoSuppr_Statut = Column(String(3))
-    ReponseAutoSuppr_Date = Column(Date)
-    Repertoire_Statut = Column(String(3))
-    AutrePartage = Column(String(40))
-    Repertoire_Detail = Column(String(40))
-    Libertempo_Statut = Column(String(3))
-    Demandeur_Libertempo = Column(String(60))
-    GLPI_Statut = Column(String(3))
-    Timesheet_Statut = Column(String(3))
-    Demandeur_GT = Column(String(60))
-    Quadra_Statut = Column(String(3))
-    SageCompta_Statut = Column(String(3))
-    SageRH_Statut = Column(String(3))
-    Matricule = Column(ForeignKey('personnel.Matricule'), nullable=False, index=True)
+    habilitation_num = Column(String(5), primary_key=True)
+    habilitation_categorie = Column(String(12))
+    habilitation_nom = Column(String(100))
+    habilitation_datedemande = Column(Date)
+    demandeur_nom = Column(String(60))
+    date_arrivee = Column(Date)
+    date_depart = Column(Date)
+    badge_statutCS = Column(String(12))
+    besoinMateriel_statut = Column(String(3))
+    pcFixe_statut = Column(String(3))
+    portable_statut = Column(String(3))
+    ancienUtilisateur = Column(String(100))
+    note = Column(String(250))
+    mail_statut = Column(String(3))
+    personnel_adresseGroup = Column(String(30))
+    routage_datedebut = Column(Date)
+    routage_datefin = Column(Date)
+    reponseAuto_statut = Column(String(3))
+    reponseAuto_contenu = Column(String(250))
+    reponseAutoSuppr_statut = Column(String(3))
+    reponseAutoSuppr_date = Column(Date)
+    repertoire_statut = Column(String(3))
+    repertBPORH_detail = Column(String(100))
+    libertempo_statut = Column(String(3))
+    libertempo_rattachement = Column(String(60))
+    glpi_statut = Column(String(3))
+    timesheet_statut = Column(String(3))
+    glpiTS_rattachement = Column(String(60))
+    quadra_statut = Column(String(3))
+    sageCompta_statut = Column(String(3))
+    sageRH_statut = Column(String(3))
+    matricule = Column(ForeignKey('personnel.matricule'), nullable=False, index=True)
+    partage_id = Column(ForeignKey('autre_partage.partage_id'), nullable=False, index=True)
+    adresse_id = Column(ForeignKey('autre_adresse.adresse_id'), nullable=False, index=True)
+    materiel_id = Column(ForeignKey('autre_materiel.materiel_id'), nullable=False, index=True)
+    extension_id = Column(ForeignKey('extension_mail.extension_id'), nullable=False, index=True)
+    routage_id = Column(ForeignKey('routage_mail.routage_id'), nullable=False, index=True)
 
+    adresse = relationship('AutreAdresse')
+    extension = relationship('ExtensionMail')
+    materiel = relationship('AutreMateriel')
     personnel = relationship('Personnel')
+    partage = relationship('AutrePartage')
+    routage = relationship('RoutageMail')
 
 
 class HistoriqueHabilitation(Base):
     __tablename__ = 'historique_habilitation'
 
-    Historique_id = Column(String(10), primary_key=True)
-    Historique_date = Column(Date)
-    Habilitation_Motif = Column(String(100))
-    Habilitation_num = Column(ForeignKey('habilitation.Habilitation_num'), nullable=False, index=True)
+    historique_id = Column(String(10), primary_key=True)
+    historique_date = Column(Date)
+    habilitation_motif = Column(String(100))
+    habilitation_num = Column(ForeignKey('habilitation.habilitation_num'), nullable=False, index=True)
 
     habilitation = relationship('Habilitation')
-
-
-class SauvegardeMail(Base):
-    __tablename__ = 'sauvegarde_mail'
-
-    Sauvegarde_id = Column(String(5), primary_key=True)
-    Sauvegarde_date = Column(Date)
-    List_id = Column(ForeignKey('checklist_info.List_id'), nullable=False, index=True)
-
-    List = relationship('ChecklistInfo')

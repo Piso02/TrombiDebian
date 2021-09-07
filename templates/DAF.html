@@ -1,0 +1,205 @@
+<html>
+    <head>
+        
+         <!-- Link to authentification.css -->
+         <link href="{{ url_for('static', filename= 'css/eachDepart.css')}}" rel="stylesheet" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <!-- Section exploration (page entière) -->
+            <div class="container">  
+                
+                <!-- Menu affichant les départements -->
+                    <div class="col1">
+                        <ul>
+                            <li> 
+                                <a class="navlink" href="">
+                                    ADMINISTRATION 
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="navlink" href="">
+                                     AMOA 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navlink" href="{{url_for('index')}}">
+                                     ASSOCIE 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    AUDIT 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    BPO COMPTA 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    BPO RH 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="CCIAL.html">
+                                    COMMERCIAL 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    COMMUNICATION
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="{{url_for('DAF')}}">
+                                    DAF 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    FINANCE
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    INFO
+                                </a>
+                            </li>
+                            <li>
+                                <a class="navlink" href="">
+                                     ORGA
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    QUALITE 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    RHC
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="navlink" href="">
+                                    RHI 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                <!-- Section d'exploration -->
+                    <div class="col2">
+                            <!-- top nav -->
+                            <div class="topnav">
+                                <!-- logo -->
+                                <a href="{{ url_for('index')}}">
+                                    <img class="logo" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}">
+                                </a>
+
+                                                              
+                                
+                                <!-- search bar -->  
+                                <div class="search-container">
+                                    <form action="/action_page.php">
+                                        <input type="text" placeholder="Rechercher.." name="search">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                    <img class="logout" src="{{url_for('static', filename='img/logout.png')}}">
+                                </div>
+                            </div>
+                            <!-- section personnel --> 
+                            <div class="caroussel">
+                                <table>
+                                    <!-- ligne associé -->
+                                        <tr class="associe">
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/A1.png')}}">                               
+                                                <p class="NomPersonnel"> Thierry RAJAONA </p>                                                                      
+                                                <p class="Fonction"> Associé-Gérant </p>                                                                                                             
+                                                <a href = "mailto:trajaona@fthmconsulting.com">
+                                                   <i class="fa fa-envelope" title="trajaona@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+                                            </td>
+                                        </tr>
+                                </table>
+                                <table>   
+                                    <!--  ligne senior -->
+                                        <tr class="senior">
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/Fenitra.png')}}">                                
+                                                <p class="NomPersonnel"> Harifenitra RAKOTOARISON </p>                                                                      
+                                                <p class="Fonction"> Assistant-Manager </p>                                                                                                             
+                                                <a href = "mailto:hrakotoarison@qualex.mg">
+                                                <i class="fa fa-envelope" title="hrakotoarison@qualex.mg"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 793 67 / 034 14 793 67"></i>
+                                            </td>
+                                        </tr>
+                                </table>
+                                
+                                <table>
+                                <!-- ligne junior  -->
+                                        <tr>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/Tantely.png')}}">                                
+                                                <p class="NomPersonnel"> Tantely RAZAFINDRAKOTO </p>                                                                      
+                                                <p class="Fonction"> Responsable trésorerie </p>                                                                                                             
+                                                <a href = "mailto:hlabarre@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="hlabarre@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 391 50 / 034 77 774 86"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/Ulrich.jpg')}}">                                
+                                                <p class="NomPersonnel"> Ulrich ANDRINIAINA </p>                                                                      
+                                                <p class="Fonction"> Trésorerie </p>                                                                                                             
+                                                <a href = "mailto:vrazafindrakoto@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="vrazafindrakoto@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 390 88"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/Zo.jpg')}}">                                
+                                                <p class="NomPersonnel"> Zo RAKOTOMALALA </p>                                                                      
+                                                <p class="Fonction"> Chargée de facturation </p>                                                                                                             
+                                                <a href = "mailto:branaivoharivony@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="branaivoharivony@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 05 395 55"></i>
+                                            </td>
+                                        </tr>
+                                </table>
+                                <!--<table>
+                                     ligne stagiaire 
+                                        <tr>
+                                            <td> 
+                                                <img class="photo" src="img/InfoSt1.jpg">                                
+                                                <p class="NomPersonnel"> Yves Silvère RANDRIANAINA </p>                                                                      
+                                                <p class="Fonction"> Stagiaire </p>                                                                                                             
+                                                <a href = "mailto:yrandrianaina@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="yrandrianaina@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 21 404 10"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="img/InfoSt2.jpg">                                
+                                                <p class="NomPersonnel"> Rojo RASOAMAHEFA </p>                                                                      
+                                                <p class="Fonction"> Stagiaire </p>                                                                                                             
+                                                <a href = "mailto:rrasoamahefa@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="rrasoamahefa@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 11 237 76"></i>
+                                            </td>
+                                        </tr>                
+                                </table> -->
+                            </div> 
+                    </div>           
+            </div>
+    </body>
+
+</html>

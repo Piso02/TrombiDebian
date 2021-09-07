@@ -10,6 +10,13 @@ body {
     display: flex;
 }
 
+/* Make the 2 columns inline */
+.col1, .col2 {
+    position: relative;
+    display: inline;
+    margin: 0;
+}
+
 /* --------------------------------------**-----------------------------------*/
 /* Menu depart -- 1ère colonne */
 .col1 {
@@ -19,7 +26,7 @@ body {
 }
 
 /* menu style */
-.col1 ul {
+ul {
     list-style-type: none;
     margin-top: 25%;
     margin-left: auto;
@@ -27,12 +34,12 @@ body {
     padding: 0;
     width: 70%;
 }
-.col1 ul li {
+li {
     margin: 10px;
     border: 1px solid white;
     text-align: center;
 }
-.col1 ul li a {
+li a {
     display: block;
     color: white;
     text-decoration: none;
@@ -40,7 +47,7 @@ body {
     font-weight: bold;
     font-family: 'Calibri';
 }
-.col1 ul li a:hover {
+li a:hover {
     background-color: rgb(238, 231, 231);
     color: black;
   }
@@ -53,40 +60,11 @@ body {
     height: auto;
 }
 
-/* topnav div */
-.topnav {
-    display: flex;
-}
-
 /* logo FTHM dans la section */
 .logo {
     width: 100px;
     height: 110px;
 }
-
-/* ---------------- * menu additionnel * ------------- */
-/* menu liste */
-.menulistIcon {
-    width: 50px;
-    height: 50px;
-}
-ul.menulist {
-    list-style-type: none;  
-}
-ul.menulist li {
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-    width: 80px;
-}
-ul.menulist li a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Calibri';
-    font-weight: bold;
-    font-size: small;
-}
-/* ----------------------- *** ----------------------- */
 
 /* search bar */
 .search-container {
@@ -95,7 +73,6 @@ ul.menulist li a {
 }
 input[type=text] {
     padding: 6px;
-    margin-left:70px;
     margin-top: 8px;
     font-size: 13px;
     border: 1px thin #003d6b;
@@ -154,5 +131,5 @@ p {
 .caroussel a{
     text-decoration: none;
     color: black;
-}  
+}
 

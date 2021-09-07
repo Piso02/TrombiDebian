@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <!-- Link to ListePersonnel.css -->
+        <link href="{{ url_for('static', filename='css/listStaff.css')}}" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="{{ url_for('index')}}"><img class="logo" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}"></a>
+            <p class="title"> Liste du personnel </p>
+        </div>
+
+        <div class="linknav">
+            <ul>
+                <li>
+                    <a class="button" href="{{ url_for('listStaff')}}"> Habilités </a>
+                </li>
+                <li>
+                    <a class="button" href="{{ url_for('toDisable')}}"> A désactiver </a>
+                </li>
+                <li>
+                    <a class="button" href="{{ url_for('listStaff')}}"> Déshabilités </a>
+                </li>
+            </ul>
+        </div>
+        
+        <table class="tablePersonnel">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: center;">                        
+                        <button class="buttonOption"> Tout sélectionner </button>
+                        <button class="buttonOption"> Procéder </button>
+                    </td> 
+                </tr>
+                <tr>
+                    <th> Prénom </th>
+                    <th> Nom </th>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> Harifenitra </td>
+                    <td> RAKOTOARISON </td>
+                    <td style="text-align: center;"> 
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td> Tantely </td>
+                    <td> RAZAFINDRAKOTO </td>
+                    <td style="text-align: center;">
+                        <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td> Zonampionona </td>
+                    <td> RAKOTOMALALA </td>
+                    <td style="text-align: center;">
+                        <input type="checkbox">
+                    </td>
+                </tr>
+        </table>
+    </body>
+</html>

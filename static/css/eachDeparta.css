@@ -1,0 +1,160 @@
+/* body properties */
+body {
+    margin: 0;
+}
+
+/* Section de la page entière */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+/* --------------------------------------**-----------------------------------*/
+/* Menu depart -- 1ère colonne */
+.col1 {
+    width: 25%;
+    height: auto;
+    background-color: #003d6b;
+}
+
+/* menu style */
+.col1 ul {
+    list-style-type: none;
+    margin-top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 70%;
+}
+.col1 ul li {
+    margin: 10px;
+    border: 1px solid white;
+    text-align: center;
+}
+.col1 ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-family: 'Calibri';
+}
+.col1 ul li a:hover {
+    background-color: rgb(238, 231, 231);
+    color: black;
+  }
+
+/* --------------------------------------**-----------------------------------*/
+/* Section d'exploration -- 2ème colonne */
+.col2 {
+    border: 1px solid #a6b0b1;
+    width: 75%;
+    height: auto;
+}
+
+/* topnav div */
+.topnav {
+    display: flex;
+}
+
+/* logo FTHM dans la section */
+.logo {
+    width: 100px;
+    height: 110px;
+}
+
+/* ---------------- * menu additionnel * ------------- */
+/* menu liste */
+.menulistIcon {
+    width: 50px;
+    height: 50px;
+}
+ul.menulist {
+    list-style-type: none;  
+}
+ul.menulist li {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+}
+ul.menulist li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: small;
+}
+/* ----------------------- *** ----------------------- */
+
+/* search bar */
+.search-container {
+    float: right;
+    display: flex;
+    position : relative;
+    left: 10%;
+}
+input[type=text] {
+    padding: 6px;
+    margin-left:70px;
+    margin-top: 8px;
+    font-size: 13px;
+    border: 1px thin #003d6b;
+  } 
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+/* déconnexion */
+.logout {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px ;
+}
+
+/* --------------------------------------**-----------------------------------*/
+/* Section personne -- pyramide */
+table {
+    width: 100%;
+}
+
+/* make the cell in center */
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* each person */
+.photo {
+    border-radius: 50%;
+    margin-bottom: 7px;
+    width: 100px;
+    height: 100px;
+}
+.NomPersonnel {
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 15px;
+}
+.Fonction {
+    font-family: 'Calibri';
+    font-size: 11px;
+}
+/* delete space between paragraphs */
+p {
+    margin :0;
+}
+/* icon mail style because it is taken as a link */
+.caroussel a{
+    text-decoration: none;
+    color: black;
+}  
+

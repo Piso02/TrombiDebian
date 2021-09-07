@@ -1,0 +1,39 @@
+/* addStaff */
+/* body properties */
+body {
+    margin: 0;
+    background-color: #003d6b;
+}
+
+/* ----------------------------------**-----------------------------*/
+/* topnav */
+.topnav {
+    display: flex;
+}
+/* logo FTHM dans topnav */
+.logo {
+    width: 100px;
+    height: 110px;
+}
+/* Grand titre liste personnel */
+.title {
+    font-size: 35px;
+    font-family: 'Calibri';
+    margin-left: 1%;
+    margin-top: 40px;
+    color: white;
+}
+
+/* ----------------------------* Form *-----------------------------*/
+.form {
+	width: 40%;
+	margin-left: auto;
+	margin-right:  auto;
+	padding: 3%;
+	border: 2px solid #003d6b;
+    border-radius: 10px;
+	background-color: white;
+}
+.form-group {
+	padding-top: 5%;
+}

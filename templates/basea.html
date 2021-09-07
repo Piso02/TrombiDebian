@@ -1,21 +1,15 @@
-<html>
-    <head>
-        
-         <!-- Link to authentification.css -->
-         <link href="{{ url_for('static', filename= 'css/index2.css')}}" rel="stylesheet" />
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-         <!-- Bootstrap 
-         <link href="css/bootstrap.css" rel="stylesheet">
-         <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-
-    </head>
-
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link href="{{ url_for('static', filename='css/eachDeparta.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>{% block title %}{% endblock %} </title>
+</head>
+<body>
         <!-- Section exploration (page entière) -->
             <div class="container">  
-                                    
-                    <!-- Menu affichant les départements -->
+                
+                <!-- Menu affichant les départements -->
                     <div class="col1">
                         <ul>
                             <li> 
@@ -100,8 +94,7 @@
                     <div class="col2">
                             <!-- top nav -->
                             <div class="topnav">
-                                <!-- logo -->
-                                
+                                    <!-- logo showing mode in modal -->                   
                                     <img class="logo" id="modebtn" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}">
                                 
                                     <!-- Mode Admin/Simple user modal -->
@@ -187,30 +180,6 @@
                                            }
                                      </script>
 
-                                <!-- style menu-->
-                                <style>
-                                     .menulistIcon{
-                                        width: 50px;
-                                        height: 50px;
-                                       }
-                                     ul.menulist {
-                                        list-style-type: none;
-                                       }
-                                     ul.menulist li {
-                                        display: inline-block;
-                                        text-align: center;
-                                        padding: 10px;
-                                        width: 80px;
-                                       }
-                                    ul.menulist li a {
-                                        text-decoration: none;
-                                        color: black;
-                                        font-family: 'Calibri';
-                                        font-weight: bold;
-                                        font-size: small;
-                                       }
-                                </style>
-
                                 <!-- menu list -->
                                 
                                     <ul class="menulist">
@@ -258,94 +227,19 @@
                                 </div>
                             </div>
 
-                            <!-- section personnel --> 
+                            <!-- section personnel -->
                             <div class="caroussel">
-                                <table>
-                                    <!-- ligne associé -->
-                                        <tr>
-                                            {% for personnel in personnel %}
-                                            <td>
-                                                <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-                                                <img class="photo" src="{{ url_for('static', filename='img/A2.png')}}">                               
-                                                <p class="NomPersonnel"> {{personnel.personnel_prenom}} {{personnel.personnel_nom}} </p>                                                                      
-                                                <p class="Fonction"> {{personnel.fonction}} </p>                                                                                                             
-                                                <a href = "mailto:xmichel@fthmconsulting.com">
-                                                   <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                                                </a>
-                                                <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                                            </td>
-                                            {% endfor %}
-                                        </tr>
-                                </table>
-                                <!-- <table>   
-                                      ligne senior 
-                                        <tr class="senior">
-                                            <td> 
-                                                <img class="photo" id="btn" src="{{ url_for('static', filename='img/InfoS1.png')}}">                                
-                                                <p class="NomPersonnel"> Bonaventure RANDRIANARIVONY </p>                                                                      
-                                                <p class="Fonction"> Administrateur Base de données et Applications </p>                                                                                                             
-                                                <a href = "mailto:brandrianarivony@fthmconsulting.com">
-                                                <i class="fa fa-envelope" title="brandrianarivony@fthmconsulting.com"></i>
-                                                </a>
-                                                <i class="fa fa-phone" title="Mobile : 032 11 793 67 / 034 14 793 67"></i>
-                                            </td>
-                                            
-                                            <div id="myModal" class="modal">
-                                            <div class="modal-content">
-                                                <span class="close">&times;</span>
-                                                <img class="photo" src="{{ url_for('static', filename='img/InfoS1.png')}}">                                
-                                                <p class="NomPersonnel"> Bonaventure RANDRIANARIVONY </p>                             
-                                                Département: INFO <br> 
-                                                Fonction: Administrateur Système et Base de données <br> 
-                                                Mail:  brandrianarivony@fthmconsulting.com <br>
-                                                Numéro:  032 11 793 67 / 034 14 793 67  <br>
-                                                Cursus : 
-                                                 Depuis 06/2003 : Admin. Système et Réseaux Chez FTHM Consulting  <br>
-                                                 12/2002 - 08/2003 : Admin. Réseaux Chez Docteur MICRO  <br>
-                                                 05/1997 - 12/2001 : Chef de projet Chez FreeSoft 
-                                            </div>
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("btn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script> 
-
-                                </table> -->
-                             </div> 
-                    </div>           
+                                {% block content %}{% endblock %}
+                            </div>
+                    </div>
             </div>
-    </body>
-
+    
+    
+    
+    <div id="footer">
+        {% block footer %}
+        
+        {% endblock %}
+    </div>
+</body>
 </html>

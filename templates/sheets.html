@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <!-- Link to ListePersonnel.css -->
+        <link href="{{ url_for('static', filename='css/listStaff.css')}}" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="{{ url_for('index')}}"><img class="logo" src="{{ url_for('static', filename='img/Logo FTHM (2).png')}}"></a>
+            <p class="title"> Fiche d'habilitation </p>
+        </div>
+        
+        <table class="tablePersonnel">
+                <tr>
+                    <th> Liste des demandes d'habilitation </th>
+                    <th> Date </th>
+                    <th> Historique des modifications </th> 
+                    <th></th> 
+                    <th> Commentaire </th> 
+                </tr>
+                <tr>
+                    <td> E125 Gestion des habilitations 564 CBJ RH </td>
+                    <td> 09/05/2021 </td>
+                    <td> Création </td>
+                    <td> <img class="icon" src="{{ url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                    <td> GLPI n°6048 </td> 
+                </tr>
+                <tr>
+                    <td> E125 Gestion des habilitations 564 Modif </td>
+                    <td> 12/05/2021 </td>
+                    <td> Changement de matricule </td>
+                    <td> <img class="icon" src="{{ url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                    <td> GLPI n°6049 </td> 
+                </tr>
+                <tr>                  
+                    <td> E125 Gestion des habilitations 564 Modif2 </td>
+                    <td> 13/05/2021 </td>
+                    <td> Habilitation adresse groupé </td>
+                    <td> <img class="icon" src="{{ url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                    <td> GLPI n°6070 </td> 
+                </tr>
+                <tr>                    
+                    <td> E125 Gestion des habilitations 564 Modif3 </td>
+                    <td> 20/05/2021 </td>
+                    <td> Routage messagerie </td>
+                    <td> <img class="icon" src="{{ url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                    <td> GLPI n°6048 </td> 
+                </tr>
+        </table>
+    </body>
+</html>
