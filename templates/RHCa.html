@@ -6,47 +6,68 @@
 {% endblock %}
 
 {% block content %}
+     <style>
+.dropbtn {
+  
+  
+  padding: 7px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  top: 10%;
+  left: 10%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover  {
+  background-color: #3e8e41;
+}
+</style>
      <table>
         <!-- ligne associé-->
             <tr class="associe">
                 <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
+                    <img class="photo" src="{{url_for('static', filename='img/A4.jpg')}}">                                
+                    <p class="NomPersonnel"> Fidelis RANDRIANIRINA </p>                                                                      
+                    <p class="Fonction"> Associé </p>                                                                                                             
                     <a href = "mailto:xmichel@fthmconsulting.com">
                         <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
                     </a>
                         <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
-
-     <table>
-        <!-- ligne manager-->
-            <tr class="manager">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
-
-     <table>
-        <!-- ligne assistant manager-->
-            <tr class="assistant-manager">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+                        <div class="dropdown">
+  <button class="dropbtn">...</button>
+  <div class="dropdown-content">
+  <a href="#">Modifier</a>
+  <a href="#">Supprimer</a>
+  <a href="{{url_for('histoInfo')}}">Historique-Info</a>
+  </div>
+</div>
                 </td>
             </tr>
      </table>
@@ -55,13 +76,21 @@
         <!-- ligne senior -->
             <tr class="senior">
                 <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
+                    <img class="photo" src="{{url_for('static', filename='img/img/Niaina.png')}}">                                
+                    <p class="NomPersonnel"> Niaina ANDRIAMPANJA </p>                                                                      
+                    <p class="Fonction"> Consultant Senior </p>                                                                                                             
                     <a href = "mailto:xmichel@fthmconsulting.com">
                         <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
                     </a>
                         <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+ <div class="dropdown">
+  <button class="dropbtn">...</button>
+  <div class="dropdown-content">
+  <a href="#">Modifier</a>
+  <a href="{{url_for('toDisable')}}">Supprimer</a>
+  <a href="{{url_for('histoInfo')}}">Historique-Info</a>
+  </div>
+
                 </td>
             </tr>
      </table>
@@ -70,29 +99,85 @@
         <!-- ligne junior-->
             <tr class="junior">
                 <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
+                    <img class="photo" src="{{url_for('static', filename='img/img/Tiavina.jpg')}}">                                
+                    <p class="NomPersonnel"> Tiavina RATSIRAHONANA </p>                                                                      
+                    <p class="Fonction"> Consultant Junior </p>                                                                                                             
                     <a href = "mailto:xmichel@fthmconsulting.com">
                         <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
                     </a>
                         <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+ <div class="dropdown">
+  <button class="dropbtn">...</button>
+  <div class="dropdown-content">
+  <a href="#">Modifier</a>
+  <a href="#">Supprimer</a>
+  <a href="{{url_for('histoInfo')}}">Historique-Info</a>
+  </div>
+
+                </td>
+            
+            
+            
+                <td> 
+                    <img class="photo" src="{{url_for('static', filename='img/img/Rojoniaina.jpg')}}">                                
+                    <p class="NomPersonnel"> Rojoniaina RANDRIANARIVELO </p>                                                                      
+                    <p class="Fonction"> Consultant Junior </p>                                                                                                             
+                    <a href = "mailto:xmichel@fthmconsulting.com">
+                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
+                    </a>
+                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+ <div class="dropdown">
+  <button class="dropbtn">...</button>
+  <div class="dropdown-content">
+  <a href="#">Modifier</a>
+  <a href="#">Supprimer</a>
+  <a href="{{url_for('histoInfo')}}">Historique-Info</a>
+  </div>
+
                 </td>
             </tr>
+
      </table>
 
      <table>
         <!-- ligne stagiaire-->
             <tr class="stagiaire">
                 <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
+                    <img class="photo" src="{{url_for('static', filename='img/img/Tsanta.jpg')}}">                                
+                    <p class="NomPersonnel"> Tsanta ANDRIAMAMONJY </p>                                                                      
+                    <p class="Fonction"> Stagiaire </p>                                                                                                             
                     <a href = "mailto:xmichel@fthmconsulting.com">
                         <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
                     </a>
                         <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+ <div class="dropdown">
+  <button class="dropbtn">...</button>
+  <div class="dropdown-content">
+  <a href="#">Modifier</a>
+  <a href="#">Supprimer</a>
+  <a href="{{url_for('histoInfo')}}">Historique-Info</a>
+  </div>
+
+                </td>
+           
+                <td> 
+                    <img class="photo" src="{{url_for('static', filename='img/Riantsoa.PNG')}}">                                
+                    <p class="NomPersonnel"> Riantsoa RANDRIANANTOANINA </p>                                                                      
+                    <p class="Fonction"> Stagiaire </p>                                                                                                             
+                    <a href = "mailto:xmichel@fthmconsulting.com">
+                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
+                    </a>
+                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+ <div class="dropdown">
+  <button class="dropbtn">...</button>
+  <div class="dropdown-content">
+  <a href="#">Modifier</a>
+  <a href="#">Supprimer</a>
+  <a href="{{url_for('histoInfo')}}">Historique-Info</a>
+  </div>
+
                 </td>
             </tr>
+
      </table>
 {% endblock %}

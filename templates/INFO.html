@@ -6,93 +6,195 @@
 {% endblock %}
 
 {% block content %}
-     <table>
-        <!-- ligne associé-->
-            <tr class="associe">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
+<table>
+                                    <!-- ligne associé -->
+                                        <tr class="associe">
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/A2.png')}}">                                
+                                                <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
+                                                <p class="Fonction"> Managing Director </p>                                                                                                             
+                                                <a href = "mailto:xmichel@fthmconsulting.com">
+                                                   <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+                                            </td>
+                                        </tr>
+                                </table>
+                                <table>   
+                                    <!--  ligne senior -->
+                                        <tr class="senior">
+                                            <td> 
+                                                <img class="photo" id="myBtn" src="{{ url_for('static', filename='img/InfoS1.png')}}">                                
+                                                <p class="NomPersonnel"> Bonaventure RANDRIANARIVONY </p>                                                                      
+                                                <p class="Fonction"> Administrateur Base de données et Applications </p>                                                                                                             
+                                                <a href = "mailto:brandrianarivony@fthmconsulting.com">
+                                                <i class="fa fa-envelope" title="brandrianarivony@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 793 67 / 034 14 793 67"></i>
+                                            </td>
 
-     <table>
-        <!-- ligne manager-->
-            <tr class="manager">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
+                                            <style>
 
-     <table>
-        <!-- ligne assistant manager-->
-            <tr class="assistant-manager">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-     <table>
-        <!-- ligne senior -->
-            <tr class="senior">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
-     <table>
-        <!-- ligne junior-->
-            <tr class="junior">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-     <table>
-        <!-- ligne stagiaire-->
-            <tr class="stagiaire">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+        <img class="photo" src="{{url_for('static', filename='img/InfoS1.png')}}">
+        <h4> Bonaventure RANDRIANARIVONY </h4> 
+    </p> </br>
+    <span> Département: </span> <h5>INFO</h5><br>
+    <span> Fonction: </span> <h5> Administrateur Système et Base de données </h5> <br>
+    <span> Mail: </span> <h5> brandrianarivony@fthmconsulting.com </h5> <br>
+    <span> Numéro: </span> <h5> 032 11 793 67/034 14 793 67 </h5> <br> <br>
+    <span> Cursus: </span> <br>
+    <h5> Depuis 06/2003 : Administrateur Système et Base de données chez FTHM Consulting </h5>
+    <h5> 12/2002 - 05/2003 : Administrateur Réseaux chez Docteur MICRO </h5> 
+    <h5> 01/2002 - 08/2002 : Administrateur Base de données chez Ferney Fine Knits </h5> 
+    <h5> 05/1991 - 12/2001 : Chef de projet chez FreeSoft </h5>  
+
+
+
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoS2.png')}}">                                
+                                                <p class="NomPersonnel"> Elysé RATSIMANIVA </p>                                                                      
+                                                <p class="Fonction"> Administrateur Système et Réseau  </p>                                                                                                             
+                                                <a href = "mailto:eratsimaniva@fthmconsulting.com">
+                                                <i class="fa fa-envelope" title="eratsimaniva@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 391 49"></i>
+                                            </td>
+                                        </tr>
+                                </table>   
+                                <table>
+                                <!-- ligne junior -->
+                                        <tr>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoJ1.png')}}">                                
+                                                <p class="NomPersonnel"> Heritiana Michael LABARRE </p>                                                                      
+                                                <p class="Fonction"> Développeur </p>                                                                                                             
+                                                <a href = "mailto:hlabarre@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="hlabarre@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 391 50 / 034 77 774 86"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoJ2.png')}}">                                
+                                                <p class="NomPersonnel"> Tina Valentin RAZAFINDRAKOTO </p>                                                                      
+                                                <p class="Fonction"> Développeur </p>                                                                                                             
+                                                <a href = "mailto:vrazafindrakoto@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="vrazafindrakoto@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 390 88"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoJ3.png')}}">                                
+                                                <p class="NomPersonnel"> Bruno RANAIVOHARIVONY </p>                                                                      
+                                                <p class="Fonction"> Assistant IT </p>                                                                                                             
+                                                <a href = "mailto:branaivoharivony@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="branaivoharivony@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 05 395 55"></i>
+                                            </td>
+                                        </tr>
+                                </table>
+                                <table>
+                                <!--     ligne stagiaire -->
+                                        <tr>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoSt1.jpg')}}">                                
+                                                <p class="NomPersonnel"> Yves Silvère RANDRIANAINA </p>                                                                      
+                                                <p class="Fonction"> Stagiaire </p>                                                                                                             
+                                                <a href = "mailto:yrandrianaina@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="yrandrianaina@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 21 404 10"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoSt2.jpg')}}">                                
+                                                <p class="NomPersonnel"> Rojo RASOAMAHEFA </p>                                                                      
+                                                <p class="Fonction"> Stagiaire </p>                                                                                                             
+                                                <a href = "mailto:rrasoamahefa@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="rrasoamahefa@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 11 237 76"></i>
+                                            </td>
+                                        </tr>                
+                                </table>
 {% endblock %}

@@ -32,13 +32,23 @@
         </div>
         
         <table class="tablePersonnel">
-                <tr>
+               
+               <tr>
                     <th> Liste des demandes d'habilitation </th>
                     <th> Date </th>
                     <th> Historique des modifications </th> 
                     <th></th> 
                     <th> Commentaire </th> 
                 </tr>
+
+                <tr>
+                    <td><a style="text-decoration:none; color:black;" href="{{url_for('habilitation555')}}"> E125 Gestion des habilitations 555 DAF </a></td>
+                    <td> 16/09/2021 </td>
+                    <td> Habilitation </td>
+                    <td> <img class="icon" src="{{ url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                    <td> GLPI n°6091 </td> 
+                </tr>
+
                 <tr>
                     <td> E125 Gestion des habilitations 485 BPOC </td>
                     <td> 09/09/2021 </td>
@@ -92,8 +102,8 @@
                     <td> E125 Gestion des habilitations 472 RHC </td>
                     <td> 11/08/2021 </td>
                     <td> Habilitation adresse groupée</td>
-                    <td> <a style="text-decoration:none" href="{{url_for('habilitation472')}}"><img class="icon" src="{{ url_for('static', filename='img/edit-alt-512.png')}}"></a></td> 
-                    <td> GLPI n°5972 </td> 
+                    <td> <a style="text-decoration:none;" href="{{url_for('habilitation472')}}"><img class="icon" src="{{ url_for('static', filename='img/edit-alt-512.png')}}"></a></td> 
+                    <td> GLPI n°5973 </td> 
                 </tr>
 
                  <tr>                    

@@ -103,13 +103,20 @@
                                         <!-- Modal content -->
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
-                                            <a href="{{url_for('index')}}"> Simple utilisateur </a> <br>
-                                            <a href="{{url_for('admin')}}"> Administrateur </a>
+                                            <a class="button" style="text-decoration:none; color:white" href="{{url_for('index')}}"> Simple utilisateur </a> 
+                                            <a class="button" style="text-decoration:none; color:white" href="{{url_for('admin')}}"> Administrateur </a>
                                         </div>
                                     </div>
 
                                     <!-- Style modal -->
                                     <style>
+                                        /* Button */
+                                        .button {
+                                            background-color: #003d6b;
+                                            padding: 10px;
+                                            margin: 10px;
+                                            border-radius: 5px;
+                                         }
                                         /* The Modal (background) */
                                             .modal {
                                                 display: none; /* Hidden by default */
@@ -195,30 +202,31 @@
                                                 <p> Liste du personnel </p>
                                             </a>
                                         </li>
+                                        <!--
                                         <li>
                                             <a href="">
                                                 <img class="menulistIcon" src="{{url_for('static', filename='img/archive.png')}}">
                                                 <p> Archives </p>
                                             </a>
                                         </li>
-                                        <!--
+                                        
                                         <li>
                                             <a href="">
                                                 <img class="menulistIcon" src="{{url_for('static', filename='img/notif.png')}}">
                                                 <p> Notifications </p>
                                             </a>
-                                        </li> -->
+                                        </li> 
                                         <li>
                                             <a href="">
                                                 <img class="menulistIcon" src="{{url_for('static', filename='img/parameter.png')}}">
                                                 <p> Paramètres </p>
                                             </a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 
                                 
                                 <!-- search bar -->  
-                                <div class="search-container">
+                                <div class="search-container" style="position:relative; left:30%">
                                     <form action="/action_page.php">
                                         <input type="text" placeholder="Rechercher.." name="search">
                                         <button type="submit"><i class="fa fa-search"></i></button>

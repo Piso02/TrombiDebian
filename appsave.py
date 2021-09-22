@@ -261,10 +261,13 @@ def addStaffA_post():
     fonction = request.form.get('fonction')
     personnel_mail = request.form.get('personnel_mail')
     personnel_phone = request.form.get('personnel_phone')
-    
-    personnel = Personnel(matricule=matricule, personnel_nom=personnel_nom, personnel_prenom=personnel_prenom, fonction=fonction, personnel_mail=personnel_mail, personnel_phone=personnel_phone)
+    departement_id = request.form.get('departement_id')
+
+    personnel = Personnel(matricule=matricule, personnel_nom=personnel_nom, personnel_prenom=personnel_prenom, fonction=fonction, personnel_mail=personnel_mail, personnel_phone=personnel_phone, departement_id=departement_id)
     db.session.add(personnel)
     db.session.commit()
+
+    flash('Le personnel a été ajouté avec succès!')
     
     return redirect(url_for('admin'))
 
@@ -293,42 +296,21 @@ def addStaffC_post():
     return redirect(url_for('admin'))
 
 #update personnel Associe
-@app.route('/updateStaff')
-def updateStaff():
-    return render_template('updateStaffAssocie.html')
-
-
-'''
-@app.route('/test')
-def view():
-    users = db.session.query(User).all()
-    return render_template('testViewUser.html', users = users)
-
-
-@app.route('/testP', methods=['GET','POST'])
-def post():
-    id = request.form.get('id')
-    username = request.form.get('username')
-    password = request.form.get('password')
-
-    user = User(id=id, username=username, password=password)
-    db.session.add(user)
-    db.session.commit()
-
-    return render_template('testUser.html', user=user)
-
-@app.route('/update/<int:id>', methods=['GET', 'POST'])
-def update(id):
-    user == User.query.get_or_404(id)
+@app.route("/personnel/<string:matricule>/update", methods=['GET','POST'])
+def updateStaff(matricule):
+    personnel = Personnel.query.get_or_404(matricule)
     if request.method == 'POST':
-        user.username = request.form['username']
-        user.password = request.form['password']
+        personnel.matricule = request.form['matricule']
+        personnel.personnel_nom = request.form['personnel_nom']
+        personnel.personnel_prenom = request.form['personnel_prenom']
+        personnel.fonction = request.form['fonction']
+        personnel.personnel_mail = request.form['personnel_mail']
+        personnel.personnel_phone = request.form['personnel_phone']
+        departement.departement_nom = request.form['departement_nom']
 
         db.session.commit()
-        return redirect(url_for('test'))
-    return render_template('testUpdate.html', user=user)
-'''
-
+        return redirect(url_for('admin'))
+    return render_template('updateStaffAssocie.html', personnel=personnel)
 
 @app.route('/listStaff')
 def listStaff():
@@ -352,35 +334,15 @@ def sheets():
 def addSheets():
     return render_template('addSheets.html')
 
-#simulation
-@app.route('/sheetss')
-def sheetss():
-    return render_template('sheetss.html')
-
-@app.route('/habilitation555')
-def habilitation555():
-    return render_template('habilitation555.html')
-
-
-@app.route('/habilitation472')
-def habilitation472():
-    return render_template('habilitation472.html')
-
-
-@app.route('/disabled472')
-def disabled472():
-    return render_template('disabled472.html')
-
-
-@app.route('/histoInfo236')
-def histoInfo236():
-    return render_template('histoInfo236.html')
-
-
+#adding sheets function
+@app.route('/addSheets', methods=['GET', 'POST'])
+def addSheets_post():
+    return redirect(url_for('sheets', habilitation=habilitation)
 
 @app.route('/histoInfo')
 def histoInfo():
-   return render_template('histoInfo.html')
+    checklist_info = db.session.query(ChecklistInfo).all() 
+    return render_template('histoInfo.html')
 
 @app.route('/addHistoInfo')
 def addHistoInfo():

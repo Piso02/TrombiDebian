@@ -2,6 +2,11 @@
 	<head>
 		<link rel=stylesheet href="{{ url_for('static', filename= 'css/addStaff.css')}}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	</head>
 
 	<body style="background-color: #003d6b">
@@ -12,11 +17,17 @@
 
         <br>
         <div class="form">
-	        <form>
+	        <form method="POST" action="/addStaffC">
 
 				<div class="form-group">
-				    <label for="personnel_statut">Type d'utilisateur à créer:</label>
-					    <select class="form-control">
+                    <label for="optionAjout">Type d'utilisateur à ajouter:</label>
+                        <a href="{{ url_for('addStaffA')}}"> Associé /</a>
+                        <a href="{{ url_for('addStaffC')}}"> Consultant </a>
+                </div>
+
+                <div class="form-group">
+				    <label for="personnel_statut">Statut d'utilisateur à créer:</label>
+					    <select name="personnel_statut" class="form-control">
 						  	<option>Manager</option>										
 						  	<option>Assistant-Manager</option>										
 						  	<option>Senior</option>					
@@ -27,56 +38,90 @@
 
 			  	<div class="form-group">
 			    	<label for="departement_nom">Département:</label>
-			    		<select class="form-control">
-			  				<option>{{ departement }}</option>
-						</select>
-			  	</div>
+                    <select style="width:100%;" id="multipleSelectExample" data-placeholder="Select an option" multiple="">
+                        <option value="1">ADM</option>
+                        <option value="2">AMOA</option>
+                        <option value="3">AUDIT</option>
+                        <option value="4">BPO C</option>
+                        <option value="5">BPO RH</option>
+                        <option value="6">COMMERCIAL</option>
+                        <option value="7">COMMUNICATION</option>
+                        <option value="8">DAF</option>
+                        <option value="9">FINANCE</option>
+                        <option value="10">INFO</option>
+                        <option value="11">ORGA</option>
+                        <option value="12">QUALITE</option>
+                        <option value="13">RHC</option>
+                        <option value="14">RHI</option>
+                    </select>
+                </div>
 
 			  	<div class="form-group">
 			    	<label for="photo"> Insérer une photo: </label> <br>
 			    	<input type="file" class="form-control-file" id="photo">	    
 			  	</div>
-			  	
+			  
+                <div class="form-group">
+	    			<label for="matricule">Matricule:</label>
+	    			<input type="text" class="form-control" name="matricule" id="matricule">  
+	  			</div>
+
 			  	<div class="form-group">
 	    			<label for="personnel_nom">Nom:</label>
-	    			<input type="text" class="form-control" id="personnel_nom">  
+	    			<input type="text" class="form-control" name="personnel_nom" id="personnel_nom">  
 	  			</div>
 
 	  			<div class="form-group">
 	    			<label for="personnel_prenom">Prénom:</label>
-	    			<input type="text" class="form-control" id="personnel_prenom">  
+	    			<input type="text" class="form-control" name="personnel_prenom" id="personnel_prenom">  
 	  			</div>
 
 	  			<div class="form-group">
 	    			<label for="fonction">Fonction:</label>
-	    			<input type="text" class="form-control" id="fonction">  
+	    			<input type="text" class="form-control" name="fonction" id="fonction">  
 	  			</div>
 
 	  			<div class="form-group">
 	    			<label for="personnel_mail">Mail:</label>
-	    			<input type="email" class="form-control" id="personnel_mail">  
+	    			<input type="email" class="form-control" name="personnel_mail" id="personnel_mail">  
 	  			</div>
 
 	  			<div class="form-group">
 	    			<label for="personnel_phone">Phone:</label>
-	    			<input type="text" class="form-control" id="personnel_phone">  
+	    			<input type="text" class="form-control" name="personnel_phone" id="personnel_phone">  
 	  			</div>
 
 	  			<div class="form-group">
-	    			<label for="cursus">Cursus</label>
-	    			<label for="cursus_datedebut">Poste du:</label>
-	    			<input type="text" class="form-control" id="cursus_datedebut">
-	    			<label for="cursus_datefin"> Au:</label>
-	    			<input type="text" class="form-control" id="cursus_datefin">
-	    			<label for="poste">Poste occupé:</label>
-	    			<input type="text" class="form-control" id="poste">
-	    			<label for="entreprise">Entreprise:</label>
-	    			<input type="text" class="form-control" id="entreprise">   			     			     		  
-	  			</div>
+                <label for="cursus"><h3>Cursus</h3></label><br>
+                    <div id="content">
+	    			    <span>Poste du:     <input type="date" style="width:30%;" name="cursur_datedebut"></span>
+	    			    <span> Au:  	    <input type="date" style="width:30%;" name="cursus_datefin"></span><br><br>
+	    			    <span>Poste occupé:	<input type="text" style="width:60%;" name="poste"></span><br><br>
+	    			    <span>Entreprise:	<input type="text" style="width:60%;" name="entreprise"></span><br><br>   			     			     		  
+	  			    </div>
+                </div>
+                <input type="button" id="more_fields" onclick="add_fields();" value="Ajouter cursus" />
                 <br> <br>
 			  	<button type="submit" class="btn btn-primary">Enregistrer</button>
 
 	        </form>
 	    </div>
 	</body>
+
+    <!-- jquery multiple select -->
+    <script>
+    $(document).ready(
+        function () {
+            $('#multipleSelectExample').select2();
+        }
+    );
+
+
+    function add_fields() {
+    var d = document.getElementById("content");
+
+    d.innerHTML += "<br /><span>Poste du:   <input type='date' style='width:30%;' name='cursur_datedebut' /> <span>Au: <input type='date' style='width:30%;' name='cursus_datefin' /><br><br>Poste occupé:	<input type='text' style='width:60%;' name='poste' /><br><br>Entreprise:	<input type='text' style='width:60%;' name='entreprise' /><br><br>";
+    }
+
+</script>
 </html>

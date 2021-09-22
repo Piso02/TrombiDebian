@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<link rel=stylesheet href="css/addStaff.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	</head>
+
+	<body style="background-color: #003d6b">
+		<div class="topnav">
+            <a href="index.html"><img class="logo" src="img/Logo FTHM (2).png"></a>
+            <p class="title"> Ajouter un personnel </p>
+        </div>
+
+        <br>
+        <div class="form">
+	        <form method="POST" action="/test">
+
+			  	<div class="form-group">
+			    	<label for="photo"> Insérer une photo: </label> <br>
+			    	<input type="file" class="form-control-file" id="photo">	    
+			  	</div>
+			  	
+			  	<div class="form-group">
+	    			<label for="id">N°:</label>
+	    			<input type="text" class="form-control" name="id">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="username">Username:</label>
+	    			<input type="text" class="form-control" name="username">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="password">Password:</label>
+	    			<input type="text" class="form-control" name="password">  
+	  			</div>
+
+			 	<button type="submit" class="btn btn-primary">Enregistrer</button>
+
+	        </form>
+	    </div>
+	</body>
+</html>

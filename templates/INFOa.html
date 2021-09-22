@@ -6,93 +6,96 @@
 {% endblock %}
 
 {% block content %}
-     <table>
-        <!-- ligne associé-->
-            <tr class="associe">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
-
-     <table>
-        <!-- ligne manager-->
-            <tr class="manager">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
-
-     <table>
-        <!-- ligne assistant manager-->
-            <tr class="assistant-manager">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
-
-     <table>
-        <!-- ligne senior -->
-            <tr class="senior">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
-
-     <table>
-        <!-- ligne junior-->
-            <tr class="junior">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
-
-     <table>
-        <!-- ligne stagiaire-->
-            <tr class="stagiaire">
-                <td> 
-                    <img class="photo" src="img/A2.png">                                
-                    <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                    <p class="Fonction"> Managing Director </p>                                                                                                             
-                    <a href = "mailto:xmichel@fthmconsulting.com">
-                        <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                    </a>
-                        <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                </td>
-            </tr>
-     </table>
+<table>
+                                    <!-- ligne associé -->
+                                        <tr class="associe">
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/A2.png')}}">                                
+                                                <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
+                                                <p class="Fonction"> Managing Director </p>                                                                                                             
+                                                <a href = "mailto:xmichel@fthmconsulting.com">
+                                                   <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 034 05 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
+                                            </td>
+                                        </tr>
+                                </table>
+                                <table>   
+                                    <!--  ligne senior -->
+                                        <tr class="senior">
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoS1.png')}}">                                
+                                                <p class="NomPersonnel"> Bonaventure RANDRIANARIVONY </p>                                                                      
+                                                <p class="Fonction"> Administrateur Base de données et Applications </p>                                                                                                             
+                                                <a href = "mailto:brandrianarivony@fthmconsulting.com">
+                                                <i class="fa fa-envelope" title="brandrianarivony@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 793 67 / 034 14 793 67"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoS2.png')}}">                                
+                                                <p class="NomPersonnel"> Elysé RATSIMANIVA </p>                                                                      
+                                                <p class="Fonction"> Administrateur Système et Réseau  </p>                                                                                                             
+                                                <a href = "mailto:eratsimaniva@fthmconsulting.com">
+                                                <i class="fa fa-envelope" title="eratsimaniva@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 391 49"></i>
+                                            </td>
+                                        </tr>
+                                </table>   
+                                <table>
+                                <!-- ligne junior -->
+                                        <tr>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoJ1.png')}}">                                
+                                                <p class="NomPersonnel"> Heritiana Michael LABARRE </p>                                                                      
+                                                <p class="Fonction"> Développeur </p>                                                                                                             
+                                                <a href = "mailto:hlabarre@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="hlabarre@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 391 50 / 034 77 774 86"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoJ2.png')}}">                                
+                                                <p class="NomPersonnel"> Tina Valentin RAZAFINDRAKOTO </p>                                                                      
+                                                <p class="Fonction"> Développeur </p>                                                                                                             
+                                                <a href = "mailto:vrazafindrakoto@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="vrazafindrakoto@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 032 11 390 88"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoJ3.png')}}">                                
+                                                <p class="NomPersonnel"> Bruno RANAIVOHARIVONY </p>                                                                      
+                                                <p class="Fonction"> Assistant IT </p>                                                                                                             
+                                                <a href = "mailto:branaivoharivony@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="branaivoharivony@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 05 395 55"></i>
+                                            </td>
+                                        </tr>
+                                </table>
+                                <table>
+                                <!--     ligne stagiaire -->
+                                        <tr>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoSt1.jpg')}}">                                
+                                                <p class="NomPersonnel"> Yves Silvère RANDRIANAINA </p>                                                                      
+                                                <p class="Fonction"> Stagiaire </p>                                                                                                             
+                                                <a href = "mailto:yrandrianaina@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="yrandrianaina@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 21 404 10"></i>
+                                            </td>
+                                            <td> 
+                                                <img class="photo" src="{{ url_for('static', filename='img/InfoSt2.jpg')}}">                                
+                                                <p class="NomPersonnel"> Rojo RASOAMAHEFA </p>                                                                      
+                                                <p class="Fonction"> Stagiaire </p>                                                                                                             
+                                                <a href = "mailto:rrasoamahefa@fthmconsulting.com">
+                                                    <i class="fa fa-envelope" title="rrasoamahefa@fthmconsulting.com"></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : 034 11 237 76"></i>
+                                            </td>
+                                        </tr>                
+                                </table>
 {% endblock %}

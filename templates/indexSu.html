@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <link href="{{ url_for('static', filename='css/eachDepart.css')}}" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>{% block title %}{% endblock %} </title>
-</head>
-<body>
+<html>
+    <head>
+        
+         <!-- Link to authentification.css -->
+         <link href="{{ url_for('static', filename= 'css/index.css')}}" rel="stylesheet" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+         <!-- Bootstrap 
+         <link href="css/bootstrap.css" rel="stylesheet">
+         <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    </head>
+
+    <body>
         <!-- Section exploration (page entière) -->
             <div class="container">  
                 
@@ -17,6 +23,7 @@
                                     ADMINISTRATION 
                                 </a> 
                             </li>
+                            
                             <li>
                                 <a class="navlink" href="{{url_for('AMOA')}}">
                                      AMOA 
@@ -86,7 +93,7 @@
                                 <a class="navlink" href="{{url_for('RHI')}}">
                                     RHI 
                                 </a>
-                            </li>
+                            </li> 
                         </ul>
                     </div>
 
@@ -102,22 +109,33 @@
                                     <input type="text" placeholder="Rechercher.." name="search">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
-                                <img class="logout" src="{{url_for('static', filename='img/logout.png')}}">
+                                <a href="/logout">
+                                    <img class="logout" src="{{url_for('static', filename='img/logout.png')}}">
+                                </a>
                             </div>
 
                             <!-- section personnel -->
                             <div class="caroussel">
-                                {% block content %}{% endblock %}
+                                <table>
+                                    <!-- ligne associé--> 
+                                    <tr>
+                                        {% for personnel in personnel %}                
+                                            <td> 
+                                                <img class="photo" src="{{url_for('static', filename='img/A1.png')}}">                                                              
+                                                <p class="NomPersonnel"> {{personnel.personnel_prenom}} {{personnel.personnel_nom}} </p>                                                                      
+                                                <p class="Fonction"> {{personnel.fonction}} </p>                                                                                                              
+                                                <a href = "mailto: {{personnel.personnel_mail}}">
+                                                   <i class="fa fa-envelope" title=""></i>
+                                                </a>
+                                                <i class="fa fa-phone" title="Mobile : {{personnel.personnel_phone}}"></i>  
+                                            </td>
+                                        
+                                        {% endfor %}    
+                                    </tr>
+                                </table>
                             </div>
-                    </div>
+                    </div>           
             </div>
-    
-    
-    
-    <div id="footer">
-        {% block footer %}
-        
-        {% endblock %}
-    </div>
-</body>
+    </body>
+
 </html>

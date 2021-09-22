@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <!-- Link to ListePersonnel.css -->
+        <link href="{{url_for('static', filename='css/listStaff.css')}}" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="{{url_for('index')}}"><img class="logo" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}"></a>
+            <p class="title"> Historique-Info </p>
+        </div>
+       
+        <div class="linknav">
+            <ul>
+                <li>
+                    <a class="button" href="{{url_for('addHistoInfo')}}"> Ajouter </a>
+                </li>
+            </ul>
+        </div>
+        <table class="tablePersonnel">
+                <tr>
+                    <th> Nom_Personnel </th>
+                    <th> Ref. Machine </th>
+                    <th> Date dernière sauvegarde mail </th>
+                    <th> VPNServer </th> 
+                    <th> VPNBPOC</th> 
+                    <th> VPNBPORH </th>
+                    <th> OCS </th>
+                    <th> 00-AMI </th>
+                    <th> 01-Propales </th>
+                    <th> 02-ProjetMission </th>
+                    <th> 04-Outils internes </th>
+                    <th> 05-Bibliothèque </th>
+                    <th> Badge </th>
+                    <th> N°Badge </th>
+                    <th> Habilitation </th>
+                    <th> <th>
+                </tr>
+                
+                <tr>
+                    <td> Hugo RAMIANDRISOA </td>
+                    <td> PRAS1703 </td>
+                    <td> 12/05/2021 </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 056 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                
+               <tr>
+                    <td> Thierry RAJAONA </td>
+                    <td> PRHP1907 </td>
+                    <td> 12/05/2021 </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 056 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Xavier MICHEL </td>
+                    <td> PRASUS1505 </td>
+                    <td> </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Fidelis RANDRIANIRINA </td>
+                    <td> PRHP1915 </td>
+                    <td> 23/03/2021 </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 097 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Harifenitra RAKOTOARISON  </td>
+                    <td> PRTO1520 </td>
+                    <td> 21/07/2021 </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 156 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Tantely RAZAFINDRAKOTO </td>
+                    <td> PRHP1936 </td>
+                    <td> 19/07/2021 </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 093 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+ 
+                <tr>
+                    <td> Ulrich ANDRINIAINA </td>
+                    <td> PRTO1602 </td>
+                    <td> 19/07/2021 </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 122 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                
+                 
+                <tr>
+                    <td> Nambinina RAKOTOMALALA </td>
+                    <td> PRTO1612 </td>
+                    <td> </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 055 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Larissa RAMANANTSOALAZA </td>
+                    <td> PRTO1509 </td>
+                    <td>22/07/2021 </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 193 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Malala RAVELOSON </td>
+                    <td> PRTO1714 </td>
+                    <td> 22/07/2021 </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 023 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Solofo RANDRIANTSALAMA </td>
+                    <td> PRASUS2225 </td>
+                    <td> 19/07/2021 </td>
+                    <td> OK </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> OK </td>
+                    <td> NOR 897 </td>
+                    <td> OK </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                 
+                <tr>
+                    <td> Fidy RAJAONARISON </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td>  </td>
+                    <td> OK </td>
+                    <td> NOR 013 </td>
+                    <td>  </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                
+        </table>
+
+<!-- retrieve from database 
+        <table class="tablePersonnel">
+                <tr>
+                    <th> Nom_Personnel </th>
+                    <th> Ref. Machine </th>
+                    <th> VPNServer </th> 
+                    <th> VPNBPOC</th> 
+                    <th> VPNBPORH </th>
+                    <th> OCS </th>
+                    <th> 00-AMI </th>
+                    <th> 01-Propales </th>
+                    <th> 02-ProjetMission </th>
+                    <th> 04-Outils internes </th>
+                    <th> 05-Bibliothèque </th>
+                    <th> Badge </th>
+                    <th> N°Badge </th>
+                    <th> Habilitation </th>
+                    <th> <th>
+                </tr>
+                {% for checklist_info in checklist_info %}
+                <tr>
+                    <td>  </td>
+                    <td> {{checklist_info.machine_ref}} </td>
+                    <td> {{checklist_info.VPNServer_statut}} </td>
+                    <td> {{checklist_info.VPNBPOC_statut}} </td>
+                    <td> {{checklist_info.VPNBPORH_statut}} </td>
+                    <td> {{checklist_info.OCS_Statut}} </td>
+                    <td> {{checklist_info.partage00AMI_statut}} </td>
+                    <td> {{checklist_info.partage01Propales_statut}} </td>
+                    <td> {{checklist_info.partage02ProjetMission_statut}} </td>
+                    <td> {{checklist_info.partage04OutilsInternes_statut}} </td>
+                    <td> {{checklist_info.partage05Biblio_statut}} </td>
+                    <td> {{checklist_info.badge_statut}} </td>
+                    <td> {{checklist_info.badge_num}} </td>
+                    <td> {{checklist_info.habilitation_statut}} </td>
+                    <td> <img class="icon" src="{{url_for('static', filename='img/edit-alt-512.png')}}"></td> 
+                </tr>
+                {% endfor %}
+        </table> -->
+    
+    </body>
+</html>

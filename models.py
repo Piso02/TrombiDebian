@@ -1,5 +1,5 @@
 # coding: utf-8
-from sqlalchemy import Column, Date, ForeignKey, String
+from sqlalchemy import Column, Date, ForeignKey, String, Table
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -36,12 +36,26 @@ class Departement(Base):
     departement_adresseGroup = Column(String(40))
     departement_partage = Column(String(40))
 
+    personnel = relationship('Personnel', secondary='departement_personnel')
+
 
 class ExtensionMail(Base):
     __tablename__ = 'extension_mail'
 
     extension_id = Column(String(5), primary_key=True)
     extension_nom = Column(String(20))
+
+
+class Personnel(Base):
+    __tablename__ = 'personnel'
+
+    matricule = Column(String(10), primary_key=True)
+    personnel_nom = Column(String(30))
+    personnel_prenom = Column(String(30))
+    fonction = Column(String(100))
+    personnel_statut = Column(String(20))
+    personnel_mail = Column(String(50))
+    personnel_phone = Column(String(100))
 
 
 class RoutageMail(Base):
@@ -58,21 +72,6 @@ class User(Base):
     password = Column(String(30))
 
 
-class Personnel(Base):
-    __tablename__ = 'personnel'
-
-    matricule = Column(String(10), primary_key=True)
-    personnel_nom = Column(String(30))
-    personnel_prenom = Column(String(30))
-    fonction = Column(String(100))
-    personnel_statut = Column(String(20))
-    personnel_mail = Column(String(50))
-    personnel_phone = Column(String(20))
-    departement_id = Column(ForeignKey('departement.departement_id'), nullable=False, index=True)
-
-    departement = relationship('Departement')
-
-
 class ChecklistInfo(Base):
     __tablename__ = 'checklist_info'
 
@@ -82,7 +81,6 @@ class ChecklistInfo(Base):
     VPNBPOC_statut = Column(String(3))
     VPNBPORH_statut = Column(String(3))
     OCS_Statut = Column(String(3))
-    dernierSauv_mail = Column(Date)
     partage00AMI_statut = Column(String(3))
     partage01Propales_statut = Column(String(3))
     partage02ProjetMission_statut = Column(String(3))
@@ -107,6 +105,13 @@ class Cursu(Base):
     matricule = Column(ForeignKey('personnel.matricule'), nullable=False, index=True)
 
     personnel = relationship('Personnel')
+
+
+t_departement_personnel = Table(
+    'departement_personnel', metadata,
+    Column('departement_id', ForeignKey('departement.departement_id'), primary_key=True, nullable=False),
+    Column('matricule', ForeignKey('personnel.matricule'), primary_key=True, nullable=False, index=True)
+)
 
 
 class Habilitation(Base):
@@ -164,6 +169,7 @@ class HistoriqueHabilitation(Base):
     historique_id = Column(String(10), primary_key=True)
     historique_date = Column(Date)
     habilitation_motif = Column(String(100))
+    commentaire = Column(String(12))
     habilitation_num = Column(ForeignKey('habilitation.habilitation_num'), nullable=False, index=True)
 
     habilitation = relationship('Habilitation')

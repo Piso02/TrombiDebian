@@ -249,26 +249,25 @@
                                                 <p> Liste du personnel </p>
                                             </a>
                                         </li>
-                                        <!--
                                         <li>
                                             <a href="">
                                                 <img class="menulistIcon" src="{{url_for('static', filename='img/archive.png')}}">
                                                 <p> Archives </p>
                                             </a>
                                         </li>
-                                        
+                                        <!--
                                         <li>
                                             <a href="">
                                                 <img class="menulistIcon" src="{{url_for('static', filename='img/notif.png')}}">
                                                 <p> Notifications </p>
                                             </a>
-                                        </li> 
+                                        </li> -->
                                         <li>
                                             <a href="">
                                                 <img class="menulistIcon" src="{{url_for('static', filename='img/parameter.png')}}">
                                                 <p> Paramètres </p>
                                             </a>
-                                        </li> -->
+                                        </li>
                                     </ul>
                                 
                                 
@@ -332,69 +331,9 @@
                                 <table>
                                     <!-- ligne associé -->
                                         <tr>
-                                            <td>
-                                                <img class="photo" src="{{ url_for('static', filename='img/A4.jpg')}}">                               
-                                                <p class="NomPersonnel"> Fidelis RANDRIANIRINA </p>                                                                      
-                                                <p class="Fonction"> Associé </p>                                                                                                             
-                                                <a href = "mailto:frandrianirina@fthmconsulting.com">
-                                                   <i class="fa fa-envelope" title=""></i>
-                                                </a>
-                                                <i class="fa fa-phone" title="Mobile : 032 11 390 68"></i>
-                                                
-                                                <div class="dropdown">
-                                                     <button class="dropbtn">...</button>
-                                                        <div class="dropdown-content">
-                                                             <a role="button" href="{{ url_for('updateStaff', matricule=matricule)}}">Modifier</a>
-                                                             <a role="button" href="#">Supprimer</a>
-                                                             <a role="button" href="{{ url_for('histoInfo')}}">Historique-info</a>
-                                                        </div>
-                                                </div>
-
-                                            </td>
-                                         
-                                            <td>
-                                                <img class="photo" src="{{ url_for('static', filename='img/A1.png')}}">                               
-                                                <p class="NomPersonnel"> Thierry RAJAONA </p>                                                                      
-                                                <p class="Fonction"> Associé - Gérant </p>                                                                                                             
-                                                <a href = "mailto:trajaona@fthmconsulting.com">
-                                                   <i class="fa fa-envelope" title="trajaona@fthmconsulting.com"></i>
-                                                </a>
-                                                <i class="fa fa-phone" title="Mobile : "></i>
-                                                
-                                                <div class="dropdown">
-                                                     <button class="dropbtn">...</button>
-                                                        <div class="dropdown-content">
-                                                             <a role="button" href="{{ url_for('updateStaff', matricule=matricule)}}">Modifier</a>
-                                                             <a role="button" href="#">Supprimer</a>
-                                                             <a role="button" href="{{ url_for('histoInfo')}}">Historique-info</a>
-                                                        </div>
-                                                </div>
-
-                                            </td>
-                                        
+                                            {% for personnel in personnel %}
                                             <td>
                                                 <img class="photo" src="{{ url_for('static', filename='img/A2.png')}}">                               
-                                                <p class="NomPersonnel"> Xavier MICHEL </p>                                                                      
-                                                <p class="Fonction"> Managing - Director </p>                                                                                                             
-                                                <a href = "mailto:xmichel@fthmconsulting.com">
-                                                   <i class="fa fa-envelope" title="xmichel@fthmconsulting.com"></i>
-                                                </a>
-                                                <i class="fa fa-phone" title="Mobile : 032 11 631 93 / 00 33 6 75 55 29 45 / 00 33 1 43 18 38 53"></i>
-                                                
-                                                <div class="dropdown">
-                                                     <button class="dropbtn">...</button>
-                                                        <div class="dropdown-content">
-                                                             <a role="button" href="{{ url_for('updateStaff', matricule=matricule)}}">Modifier</a>
-                                                             <a role="button" href="#">Supprimer</a>
-                                                             <a role="button" href="{{ url_for('histoInfo')}}">Historique-info</a>
-                                                        </div>
-                                                </div>
-
-                                            </td>
-                                          
-                                        {% for personnel in personnel %}
-                                            <td>
-                                                <img class="photo" src="{{ url_for('static', filename='img/A3.jpg')}}">                               
                                                 <p class="NomPersonnel"> {{personnel.personnel_prenom}} {{personnel.personnel_nom}} </p>                                                                      
                                                 <p class="Fonction"> {{personnel.fonction}} </p>                                                                                                             
                                                 <a href = "mailto:xmichel@fthmconsulting.com">
@@ -412,7 +351,7 @@
                                                 </div>
 
                                             </td>
-                                         {% endfor %}
+                                            {% endfor %}
                                         </tr>
                                 </table>
 

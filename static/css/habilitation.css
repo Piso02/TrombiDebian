@@ -1,0 +1,27 @@
+/* body properties */
+body {
+    margin: 0;
+}
+
+/* ----------------------------------**-----------------------------*/
+/* topnav */
+.topnav {
+    display: flex;
+}
+/* logo FTHM dans topnav */
+.logo {
+    width: 100px;
+    height: 110px;
+}
+/* Grand titre liste personnel */
+.title {
+    font-size: 50px;
+    font-family: 'Calibri';
+    margin-left: 1%;
+    margin-top: 40px;
+}
+
+/* ------------------------------**----------------------------------*/
+.form-group {
+    padding: 10px;
+}

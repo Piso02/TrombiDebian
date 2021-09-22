@@ -22,16 +22,71 @@
                 <li>
                     <a class="button" href="{{ url_for('disabled')}}"> Déshabilités </a>
                 </li>
+                <li>
+                    <a class="button" href="{{ url_for('sheets')}}"> Fiche d'habilitation</a>
+                </li>
+                <li>
+                    <a class="button" href="{{ url_for('histoInfo')}}"> Historique-Info </a>
+                </li>
+ 
             </ul>
         </div>
 
         <table class="tablePersonnel">
                 <tr>
+                    <th> Département </th>
+                    <th> Matricule </th>
                     <th> Prénom </th>
                     <th> Nom </th>
                     <th> </th>
                 </tr>
+                
                 <tr>
+                    <td> ASSOCIE </td>
+                    <td>  98 </td>
+                    <td> Thierry </td>
+                    <td> RAJAONA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> ASSOCIE </td>
+                    <td>  269 </td>
+                    <td> Xavier </td>
+                    <td> MICHEL </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+  
+                <tr>
+                    <td> ASSOCIE </td>
+                    <td> 403 </td>
+                    <td> Fidelis </td>
+                    <td> RANDRIANIRINA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> ASSOCIE </td>
+                    <td> 236 </td>
+                    <td> Hugo </td>
+                    <td> RAMIANDRISOA </td>
+                    <td>
+                         <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                         <img class="icon" src="{{ url_for('static', filename='img/loadingHabilit.png')}}"> 
+                        
+                    </td>
+                </tr>
+                 <tr>
+                    <td> DAF </td>
+                    <td> 423 </td>
                     <td> Harifenitra </td>
                     <td> RAKOTOARISON </td>
                     <td> 
@@ -39,19 +94,191 @@
                         <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
                     </td>
                 </tr>
-                <tr>
+                 <tr>
+                    <td> DAF </td>
+                    <td> 416 </td>
                     <td> Tantely </td>
                     <td> RAZAFINDRAKOTO </td>
-                    <td>
+                    <td> 
                         <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
                         <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
-                    </td>                   
+                    </td>
                 </tr>
-                <tr>
-                    <td> Zonampionona </td>
+                 <tr>
+                    <td> DAF </td>
+                    <td> 555 </td>
+                    <td> Zonampoina </td>
                     <td> RAKOTOMALALA </td>
-                    <td></td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/loadingHabilit.png')}}"> 
+                    </td>
                 </tr>
-        </table>
+                 <tr>
+                    <td> DAF </td>
+                    <td> 567 </td>
+                    <td> Ulrich </td>
+                    <td> ANDRINIAINA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> DAF </td>
+                    <td> STG175 </td>
+                    <td> Nambinina </td>
+                    <td> RAKOTOMALALA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> ADM </td>
+                    <td> 560 </td>
+                    <td> Larissa </td>
+                    <td> RAMANANTSOALAZA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> ADM </td>
+                    <td> 340 </td>
+                    <td> Malala </td>
+                    <td> RAVELOSON </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> ADM </td>
+                    <td> 114 </td>
+                    <td> Fidy </td>
+                    <td> RAJAONARISON </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> ADM </td>
+                    <td> 265 </td>
+                    <td> Solofo </td>
+                    <td> RANDRIANTSALAMA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> ADM </td>
+                    <td> 16 </td>
+                    <td> Jacqueline </td>
+                    <td> RAVAOMALALA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> INFO </td>
+                    <td> 129 </td>
+                    <td> Bonaventure </td>
+                    <td> RANDRIANARIVONY </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> INFO </td>
+                    <td> 451 </td>
+                    <td> Elysé </td>
+                    <td> RATSIMANIVA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td> INFO </td>
+                    <td> 477 </td>
+                    <td> Heritiana Michael </td>
+                    <td> LABARRE </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td> INFO </td>
+                    <td> 501 </td>
+                    <td> Tina </td>
+                    <td> RAZAFINDRAKOTO </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> INFO </td>
+                    <td> 559 </td>
+                    <td> Bruno </td>
+                    <td> RANAIVOHARIVONY </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                 <tr>
+                    <td> INFO </td>
+                    <td> STG167 </td>
+                    <td> Yves Silvère </td>
+                    <td> RANDRIANAINA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                
+                 <tr>
+                    <td> INFO </td>
+                    <td> STG170 </td>
+                    <td> Rojo </td>
+                    <td> RASOAMAHEFA </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>         
+                
+         </table>
+        
+        <!-- liststaff retrieved from database 
+        <table class="tablePersonnel">
+                <tr>
+                    <th> Prénom </th>
+                    <th> Nom </th>
+                    <th> </th>
+                </tr>
+                
+                {% for personnel in personnel %}
+                <tr>
+                    <td> {{personnel.personnel_prenom}} </td>
+                    <td> {{personnel.personnel_nom}} </td>
+                    <td> 
+                        <img class="icon" src="{{ url_for('static', filename='img/check (1).png')}}"> 
+                        <img class="icon" src="{{ url_for('static', filename='img/checkHabilit.png')}}"> 
+                    </td>
+                </tr>
+                {% endfor %}
+        </table> -->
+
     </body>
 </html>

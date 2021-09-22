@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<link rel=stylesheet href="{{ url_for('static', filename='css/addStaff.css')}}">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	</head>
+
+	<body style="background-color: #003d6b">
+		<div class="topnav">
+            <a href="{{ url_for('index')}}"><img class="logo" src="{{ url_for('static', filename='img/Logo FTHM (2).png')}}"></a>
+            <p class="title"> Ajouter une historique-info </p>
+        </div>
+
+        <br>
+        <div class="form">
+	        <form >
+
+               	<div class="form-group">
+			    	<label for="list_id"> N° Historique: </label> <br>
+			    	<input type="text" class="form-control" name="list_id">	    
+			  	</div>
+			  
+               <div class="form-group">
+			    	<label for="matricule">Nom Personnel:</label>
+                    <input type="text" class="form-control" name="matricule">
+                        <!-- selecting personnel
+                        <select name="matricule">
+                            {% for personnel in personnel %}
+                            <option> {{personnel.personnel_prenom}} {{personnel.personnel_prenom}}</option>
+                            {% endfor %}
+                        </select> -->	
+			  	</div>
+
+			  	<div class="form-group">
+			    	<label for="machine_ref"> Référence machine: </label> <br>
+			    	<input type="text" class="form-control" name="machine_ref">	    
+			  	</div>
+
+	            <div class="form-group">
+			    	<label for="machine_ref"> Date de dernière sauvegarde mail: </label> <br>
+			    	<input type="date" class="form-control" name="machine_ref">	    
+			  	</div>
+			  
+                <div class="form-group">
+	    			<label for="VPNServer_statut">VPNServer_statut:</label>
+	    			<input type="text" class="form-control" name="VPNServer_statut">  
+	  			</div>
+
+                <div class="form-group">
+	    			<label for="VPNBPOC_statut">VPNBPOC_statut:</label>
+	    			<input type="text" class="form-control" name="VPNBPOC_statut">  
+	  			</div>
+
+                <div class="form-group">
+	    			<label for="VPNBPORH_statut">VPNBPORH_statut:</label>
+	    			<input type="text" class="form-control" name="VPNBPORH_statut">  
+	  			</div>
+
+			  	<div class="form-group">
+	    			<label for="OCS_Statut">Statut OCS:</label>
+	    			<input type="text" class="form-control" name="OCS_Statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="partage00AMI_statut">Statut Partage 00-AMI:</label>
+	    			<input type="text" class="form-control" name="partage00AMI_statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="partage01Propales_statut">Statut Partage 01-Propales:</label>
+	    			<input type="text" class="form-control" name="partage01Propales_statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="partage02ProjetMission_statut">Statut Partage 02-Projet Mission:</label>
+	    			<input type="text" class="form-control" name="partage02ProjetMission_statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="partage04OutilsInternes_statut">Statut Partage 04-Outils internes:</label>
+	    			<input type="text" class="form-control" name="partage04OutilsInternes_statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="partage05Biblio_statut">Statut Partage 05-Bibliothèque:</label>
+	    			<input type="text" class="form-control" name="partage05Biblio_statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="badge_statut">Statut Badge:</label>
+	    			<input type="text" class="form-control" name="badge_statut">  
+	  			</div>
+			  
+	  			<div class="form-group">
+	    			<label for="badge_num">Numéro Badge:</label>
+	    			<input type="text" class="form-control" name="badge_num">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="habilitation_statut">Statut Habilitation:</label>
+	    			<input type="text" class="form-control" name="habilitation_statut">  
+	  			</div>
+                <br>
+                <a style="text-decoration:none;" href="{{url_for('histoInfo236')}}" class="btn btn-primary">Enregistrer</a>
+
+	        </form>
+	    </div>
+	</body>
+</html>

@@ -1,0 +1,244 @@
+<html>
+	<head>
+		<link rel=stylesheet href="{{ url_for('static', filename='css/addStaff.css')}}">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	</head>
+
+	<body style="background-color: #003d6b">
+		<div class="topnav">
+            <a href="{{ url_for('index')}}"><img class="logo" src="{{ url_for('static', filename='img/Logo FTHM (2).png')}}"></a>
+            <p class="title"> Ajouter une demande d'habilitation </p>
+        </div>
+
+        <br>
+        <div class="form">
+	        <form>
+
+               	<div class="form-group">
+			    	<label for="habilitation_num"> Matricule: </label> <br>
+			    	<input type="text" class="form-control" name="habilitation_num">	    
+			  	</div>
+
+
+               	<div class="form-group">
+			    	<label for="habilitation_num">GLPI N°: </label> <br>
+			    	<input type="text" class="form-control" name="habilitation_num">	    
+			  	</div>
+			  
+               <div class="form-group">
+			    	<label for="habilitation_categorie">Catégorie:</label><br>
+                    <span> Création </span>
+                    <input type="checkbox" name="habilitation_categorie">&nbsp;
+                    <span> Modification </span>
+                    <input type="checkbox" name="habilitation_categorie">&nbsp;
+                    <span> Suppression </span>
+                    <input type="checkbox" name="habilitation_categorie">
+               
+               </div>
+
+			  	<div class="form-group">
+			    	<label for="habilitation_nom"> Nom de la Fiche: </label> <br>
+			    	<input type="text" class="form-control" name="habilitation_nom">	    
+			  	</div>
+			  
+                <div class="form-group">
+	    			<label for="habilitation_datedemande">Date de la demande:</label>
+	    			<input type="date" class="form-control" name="habilitation_datedemande">  
+	  			</div>
+
+                <div class="form-group">
+	    			<label for="demandeur_nom">Nom de l'Associé/Manager demandeur:</label>
+	    			<input type="text" class="form-control" name="demandeur_nom">  
+	  			</div>
+
+                <div class="form-group">
+	    			<label for="date_arrivee">Date d'arrivée:</label>
+	    			<input type="date" class="form-control" name="date_arrivee">  
+	  			</div>
+
+			  	<div class="form-group">
+	    			<label for="date_depart">Date de départ:</label>
+	    			<input type="date" class="form-control" name="date_depart">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="badge_statut">Statut badge:</label><br>
+	    			<span> Création </span>
+                    <input type="checkbox" name="badge_statut">&nbsp;
+                    <span> Suppression </span>
+                    <input type="checkbox" name="badge_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="besoinMateriel_statut">Statut des besoins en matériel:</label> <br>
+	    			<span> OUI </span>
+                    <input type="checkbox" name="besoinMateriel_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="besoinMateriel_statut">
+                    
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="pcFixe_statut">PC Fixe:</label>
+	    			<input type="checkbox" name="pcFixe_statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="portable_statut">Portable:</label>
+	    			<input type="checkbox" name="portable_statut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="ancienUtilisateur">Nom de l'ancien utilisateur:</label>
+	    			<input type="text" class="form-control" name="ancienUtilisateur">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="note">Note:</label>
+	    			<input type="text" class="form-control" name="note">  
+	  			</div>
+			  
+	  			<div class="form-group">
+	    			<label for="mail_statut">Statut Mail:</label> <br>
+	    			<span> Création </span>
+                    <input type="checkbox" name="mail_statut">&nbsp;
+                    <span> Suppression </span>
+                    <input type="checkbox" name="mail_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="personnel_extensionMail">Extension Mail:</label><br>
+	    			<input type="checkbox" name="extensionMail">  @fthmconsulting.com &nbsp;
+	    			<input type="checkbox" name="extensionMail">  @equation.mg &nbsp;
+	    			<input type="checkbox" name="extensionMail">  @qualex.mg &nbsp;
+	  			</div>
+                
+                <div class="form-group">
+	    			<label for="personnel_adresseGroup">Adresse groupée personnel:</label><br>
+	    			<input type="checkbox" name="personnel_adresseGroup">  personnel@fthmconsulting.com
+	  			</div>
+
+            	<div class="form-group">
+	    			<label for="personnel_autreAdresse">Autre adresse :</label><br>
+	    			<input type="text" name="personnel_autreAdresse"> 
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="routage_datedebut">Début de routage Mail:</label>
+	    			<input type="date" class="form-control" name="routage_datedebut">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="routage_datefin">Fin de routage Mail:</label>
+	    			<input type="date" class="form-control" name="routage_datefin">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="reponseAuto_statut">Statut réponse automatique:</label><br>
+	    			 <span> OUI </span>
+                    <input type="checkbox" name="reponseAuto_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="reponseAuto_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="reponseAuto_contenu">Contenu Réponse automatique:</label>
+	    			<input type="text" class="form-control" name="personnel_adresseGroup">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="reponseAutoSuppr_statut">Statut suppression réponse automatique:</label><br>
+	    			<span> OUI </span>
+                    <input type="checkbox" name="reponseAutoSuppr_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="reponseAutoSuppr_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="reponseAutoSuppr_date">Date de la suppression réponse automatique:</label>
+	    			<input type="date" class="form-control" name="reponseAutoSuppr_date">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="repertoire_statut">Statut répertoire:</label><br>
+	    			<span> OUI </span>
+                    <input type="checkbox" name="repertoire_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="repertoire_statut">
+	  			</div>
+                
+	  			<div class="form-group">
+	    			<label for="autre_partage">Autre partage</label>
+	    			<input type="text" class="form-control" name="autre_partage">  
+	  			</div>
+	  		
+                <div class="form-group">
+	    			<label for="repertBPORH_detail">Détail répertoire BPORH:</label>
+	    			<input type="text" class="form-control" name="repertBPORH_detail">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="libertempo_statut">Statut Libertempo:</label><br>
+	    			 <span> OUI </span>
+                    <input type="checkbox" name="libertempo_statut"> &nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="libertempo_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="libertempo_rattachement">Associé/Manager rattaché:</label>
+	    			<input type="text" class="form-control" name="libertempo_rattachement">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="glpi_statut">Statut GLPI:</label><br>
+	    			<span> OUI </span>
+                    <input type="checkbox" name="glpi_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="glpi_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="timesheet_statut">Statut Timesheet:</label><br>
+	    		    <span> OUI </span>
+                    <input type="checkbox" name="timesheet_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="timesheet_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="glpiTS_rattachement">Associé/Manager rattaché:</label>
+	    			<input type="text" class="form-control" name="glpiTS_rattachement">  
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="quadra_statut">Statut Quadra:</label><br>
+	    			<span> OUI </span>
+                    <input type="checkbox" name="quadra_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="quadra_statut">
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="sageCompta_statut">Statut Sage Compta:</label><br>
+	    			<span> OUI </span>
+                    <input type="checkbox" name="sageCompta_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="sageCompta_statut">	  			    
+	  			</div>
+
+	  			<div class="form-group">
+	    			<label for="sageRH_statut">Statut SageRH:</label><br>
+	    			<span> OUI </span>
+                    <input type="checkbox" name="sageRH_statut">&nbsp;
+                    <span> NON </span>
+                    <input type="checkbox" name="sageRH_statut">	  			  
+	  			</div>
+
+                <br>
+                <a href="{{url_for('sheetss')}}" class="btn btn-primary">Enregistrer </a>
+
+	        </form>
+	    </div>
+	</body>
+</html>

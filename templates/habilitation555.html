@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <!-- Link to ListePersonnel.css -->
+        <link href="{{url_for('static', filename='css/habilitation.css')}}" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> 
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="{{url_for('index')}}"><img class="logo" src="{{url_for('static', filename='img/Logo FTHM (2).png')}}"></a>
+            <p class="title"> Habilitation </p>
+
+            <a style="text-decoration:none; position:relative; left:70%;" href="{{url_for('sheetss')}}"> Retour </a>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <span>Création: </span>
+                <input type="checkbox" checked> &nbsp; &nbsp;
+
+                <span> Modification: </span>
+                <input type="checkbox">&nbsp; &nbsp;
+
+                <span> Suppression: </span>
+                <input type="checkbox">
+            </div>
+            <br>
+
+            <div class="form-group">
+                <table class="table">
+                    <tr>
+                        <td> Date de la demande</td>
+                        <td> 16/09/2021 </td>
+                    </tr>
+                    <tr>
+                        <td> Manager/Associé demandeur </td>
+                        <td> Thierry RAJAONA </td>
+                    </tr>
+                    <tr>
+                        <td> Nom du consultant à habiliter </td>
+                        <td> RAKOTOMALALA </td>
+                    </tr>
+                    <tr>
+                        <td> Prénom du consultant à habiliter </td>
+                        <td> Zonampionona </td>
+                   </tr>
+                   <tr> 
+                        <td> Profil du consultant </td>
+                        <td> Chargée de facturartion </td>
+                   </tr>
+                    <tr>
+                        <td> Date d'arrivée </td>
+                        <td> 29/08/2021 </td>
+                    </tr>
+                    <tr>
+                        <td> Date de départ </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> Matricule </td>
+                        <td> 555 </td>
+                    </tr>
+                </table>
+                <br><br>
+
+                <table class="table">
+                    <tr style="text-align:center;">
+                        <td><h4>BADGE</h4></td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" checked> Création </td> &nbsp;
+                        <td> <input type="checkbox"> Suppression </td>
+                    </tr>
+                </table>
+                <br>
+
+                <table>
+                    <tr style="text-align:center;">
+                        <td><h4>MATERIEL</h4> </td>
+                    </tr>
+                    <tr>
+                        <td><h5> Besoin en matériel</h5> </td>
+                        <td> <input type="checkbox" checked> OUI &nbsp;&nbsp;
+                             <input type="checkbox"> NON 
+                        </td>
+                   </tr>
+                   <tr>
+                        <td> SI OUI</td> 
+                   </tr>
+                   <tr>
+                        <td> PC Fixe </td>
+                        <td> <input type="checkbox"> </td>
+                   </tr>
+                   <tr>
+                        <td> Portable </td>
+                        <td> <input type="checkbox" checked> </td>
+                   </tr>
+                   <tr>
+                        <td> SI NON</td>
+                   </tr>
+                   <tr> 
+                        <td> Nom et Prénom de l'ancien utilisateur </td>
+                        <td> </td>
+                   </tr>
+                </table>
+
+                <table class="table">
+                    <tr style="text-align:center;"> 
+                        <td><h4>HABILITATIONS</h4> </td>
+                    </tr>
+                    <tr>
+                        <td><h5> MAIL </h5> </td>
+                        <td> <input type="checkbox" checked> Création &nbsp;
+                             <input type="checkbox"> Suppression
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <h5>Extension </h5> </td>
+                        <td> 
+                             <input type="checkbox" checked> @fthmconsulting.com &nbsp;
+                             <input type="checkbox"> @equation.mg &nbsp;
+                             <input type="checkbox"> @qualex.mg 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Adresse groupée personnel FTHM </td>
+                        <td> 
+                            <input type="checkbox" checked> personnel@fthmconsulting.com 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Autre adresse </td>
+                        <td> daf@fthmconsulting.com </td>
+                    </tr>
+                    <tr>
+                        <td> Si suppression ou routage temporaire </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> Routage messagerie </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> Période de routage </td>
+                        <td> </td>
+                    </tr>
+                    <tr> 
+                        <td> Mise en place d'une réponse automatique </td>
+                        <td> <input type="checkbox"> OUI &nbsp;
+                             <input type="checkbox" checked> NON 
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td> <h5>SI OUI</h5> </td>
+                    </tr>
+                    <tr>
+                        <td> Rédaction du message </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> Date d'activation </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> Date de désactivation </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td> Suppression </td>
+                        <td> <input type="checkbox"> </td>
+                    </tr>
+                    <tr>
+                        <td> Date de suppression </td>
+                        <td> </td>
+                    </tr>
+                    <tr> 
+                        <td> <h4>REPERTOIRES</h4> </td>
+                    </tr>
+                    <tr>
+                        <td> Consultants (par défaut en lecture) </td>
+                        <td> <input type="checkbox" checked> 04-Outils internes,  &nbsp;
+                             <input type="checkbox" checked> 05-Bibliothèque, &nbsp;
+                             <input type="checkbox" checked> 06-Qualité
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td> Si BPO RH - détails des répertoires clients auxquels le collaborateur doit être habilité </td>
+                        <td> </td>
+                    </tr>
+                    <tr> 
+                        <td><h4>OUTILS INTERNES </h4></td>
+                    </tr>
+                    <tr>     
+                        <td> Libertempo </td>
+                        <td> <input type="checkbox" checked> </td>
+                    </tr>
+                    <tr>
+                        <td> Manager/Associé de rattachement </td>
+                        <td> Thierry RAJAONA </td>
+                    </tr>
+                    <tr>
+                        <td> GLPI </td>
+                        <td> <input type="checkbox" checked> </td>
+                    </tr>
+                    <tr> 
+                        <td> TIMESHEET </td>
+                        <td> <input type="checkbox" checked> </td>
+                    </tr>
+                    <tr>
+                        <td> Manager/Associé de rattachement </td>
+                        <td> Thierry RAJAONA </td>
+                    </tr>
+                    <tr>
+                        <td> <h4>LOGICIELS</h4> <td>
+                    </tr>
+                    <tr>
+                        <td> QUADRA </td>
+                        <td>   <input type="checkbox" checked> </td>
+                    </tr>
+                     <tr>
+                        <td> SAGE Compta </td>
+                        <td>  <input type="checkbox"> </td>
+                    </tr>
+
+                    <tr>
+                        <td> SAGE RH </td>
+                        <td>  <input type="checkbox"> </td>
+                    </tr>                 
+                </table>
+
+            </div>
+        </form>
+    </body>
+</html>
